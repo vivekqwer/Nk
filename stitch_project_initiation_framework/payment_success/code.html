@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Analog Master - Payment Successful</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;0,700;1,400;1,700&amp;family=Work+Sans:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#e0dac9",
+                    "primary-fixed": "#ffdad8",
+                    "surface-variant": "#e9e2d2",
+                    "on-surface": "#1e1c12",
+                    "surface-container-high": "#eee8d7",
+                    "surface-tint": "#bb152c",
+                    "on-primary-container": "#fffbff",
+                    "tertiary": "#8b4c11",
+                    "tertiary-fixed": "#ffdcc4",
+                    "on-tertiary": "#ffffff",
+                    "outline": "#8f6f6e",
+                    "primary": "#b7102a",
+                    "surface-container-low": "#faf3e2",
+                    "background": "#fff9ec",
+                    "on-secondary-container": "#007166",
+                    "on-error": "#ffffff",
+                    "primary-container": "#db313f",
+                    "inverse-primary": "#ffb3b1",
+                    "surface-bright": "#fff9ec",
+                    "secondary-fixed": "#8cf5e4",
+                    "primary-fixed-dim": "#ffb3b1",
+                    "on-tertiary-fixed": "#2f1400",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#92001c",
+                    "outline-variant": "#e4bebc",
+                    "secondary-fixed-dim": "#6fd8c8",
+                    "on-secondary-fixed-variant": "#005048",
+                    "surface": "#fff9ec",
+                    "surface-container-highest": "#e9e2d2",
+                    "inverse-surface": "#333025",
+                    "surface-container": "#f4eddd",
+                    "on-tertiary-fixed-variant": "#6f3800",
+                    "secondary": "#006a60",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#fffbff",
+                    "on-surface-variant": "#5b403f",
+                    "on-secondary-fixed": "#00201c",
+                    "tertiary-container": "#a96428",
+                    "inverse-on-surface": "#f7f0df",
+                    "on-background": "#1e1c12",
+                    "secondary-container": "#8cf5e4",
+                    "tertiary-fixed-dim": "#ffb780",
+                    "on-primary-fixed": "#410007",
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Work Sans", "sans-serif"],
+                    "label": ["JetBrains Mono", "monospace"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .success-gradient {
+            background: linear-gradient(135deg, #2A9D8F 0%, #8cf5e4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @keyframes scaleIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .animate-scale-in {
+            animation: scaleIn 600ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+        .confetti-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10l2 2m20 5l-2 2m40-10l3 3M80 40l-2 2M20 70l4 4M50 80l-3-3M90 90l2-2' stroke='%23E63946' stroke-width='1' fill='none' opacity='0.2'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen overflow-x-hidden selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Confetti Static Overlay -->
+<div class="fixed inset-0 pointer-events-none confetti-overlay opacity-30 z-0"></div>
+<!-- Main Content Canvas -->
+<main class="relative z-10 flex flex-col items-center justify-center pt-16 pb-24 px-6 max-w-[680px] mx-auto">
+<!-- Success Header Section -->
+<div class="text-center mb-12">
+<div class="inline-flex items-center justify-center mb-8 animate-scale-in">
+<span class="material-symbols-outlined success-gradient !text-[120px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h1 class="font-headline font-semibold text-[56px] leading-none tracking-tight text-on-surface mb-4">You're in.</h1>
+<p class="text-lg text-on-surface-variant font-medium max-w-[480px] mx-auto">
+                Your Pro subscription is active. Welcome to Harmony, <span class="text-primary font-bold">Julian</span>.
+            </p>
+</div>
+<!-- Order Summary Card -->
+<div class="w-full max-w-[520px] bg-surface-container-low rounded-[20px] p-8 mb-12 shadow-sm">
+<div class="flex flex-col gap-6">
+<!-- ID & Copy -->
+<div class="flex justify-between items-center pb-4 border-b border-outline-variant/20">
+<div class="flex flex-col">
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Transaction ID</span>
+<span class="font-label text-sm text-on-surface">AM-99283-TRX</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">content_copy</span>
+</button>
+</div>
+<!-- Plan Details Grid -->
+<div class="grid grid-cols-2 gap-y-6">
+<div>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant block mb-1">Plan Name</span>
+<p class="font-medium text-on-surface">The Master's Suite</p>
+<p class="text-xs text-on-surface-variant">Annual Billing</p>
+</div>
+<div class="text-right">
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant block mb-1">Amount Paid</span>
+<p class="text-2xl font-bold text-on-surface">₹531</p>
+</div>
+<div>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant block mb-1">Next Billing</span>
+<p class="font-medium text-on-surface">Oct 24, 2025</p>
+</div>
+<div class="flex items-end justify-end">
+<button class="font-label text-[11px] uppercase tracking-widest text-primary font-bold hover:underline flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">download</span>
+                            Download invoice
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA Row -->
+<div class="flex flex-col md:flex-row items-center justify-center gap-4 w-full mb-20">
+<button class="w-full md:w-auto bg-primary text-on-primary px-10 py-4 rounded-xl font-semibold shadow-md hover:opacity-90 active:scale-95 transition-all flex items-center justify-center gap-2">
+                Go to Dashboard
+                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+<button class="w-full md:w-auto border-2 border-outline-variant text-on-surface-variant px-10 py-4 rounded-xl font-semibold hover:bg-surface-container transition-colors active:scale-95">
+                Browse courses
+            </button>
+</div>
+<!-- Suggested Next Steps -->
+<section class="w-full">
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-headline text-3xl font-bold italic text-on-surface">Start here</h3>
+<div class="h-[1px] flex-grow mx-6 bg-outline-variant/30"></div>
+</div>
+<div class="flex flex-col md:flex-row gap-6">
+<!-- Course Card 1 -->
+<div class="flex-1 bg-surface rounded-xl overflow-hidden group hover:shadow-xl transition-all duration-300">
+<div class="h-40 overflow-hidden relative">
+<img alt="Modular Synthesis" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="close-up of a vintage analog synthesizer with colorful patch cables in a dimly lit professional music studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw2NG3zsMeJK3DPyxcLrXvZpmmdg0QqdpI4UebrN7hJ9ymvFQdDKENfqKzrpbmyT03O9MhFxLfMnVnIkDwDwX4nPL1wkp76A9Xm8EN-r8sRt3S8NjbCb2dfA44iklNEuDABi_LAUUPIo0njatZEVZxy98dzWgAdujCJ4qTAxAkR8_OECsmX4UGrxRyuEhkvo-5DX4i_Dd9P4XJsvCTLuzDlvCfuFX5h2Vq_9Gq7R-el81U8Sou0Gja6vlU6Mmv1IsEzdLTXF98snJA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute bottom-3 left-3 bg-secondary text-white text-[10px] font-label px-2 py-1 rounded">PREMIUM</span>
+</div>
+<div class="p-5">
+<p class="font-headline text-xl font-semibold mb-1 group-hover:text-primary transition-colors">Modular Foundations</p>
+<p class="text-sm text-on-surface-variant line-clamp-2">Master the signal flow of West Coast synthesis.</p>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="flex-1 bg-surface rounded-xl overflow-hidden group hover:shadow-xl transition-all duration-300">
+<div class="h-40 overflow-hidden relative">
+<img alt="Mixing Masterclass" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="cinematic shot of a professional mixing console with faders at various heights and soft bokeh lights in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzdTK5hPDIvkXpJ-BhnXzCzoiuZ5020U1RuXBaMocuSUVCOXg6TUQIp2aWhNb4mGRk2GdNAevuYGWs30SlFqkq9FMcHYSK5pmCpDZu0CUEUALyTy3pPK6PzJTCJcGPKK0bJmn8O9wg7ZQdhPHfRx-mdsYWq2dRjzl8xEjOREJ4cnj03gMwqAu-DPrvnji8FRHraCmbFbP4w65rTIy1EXja7ikdwjQ5CBFIR67Ytd8yl1hAHSYnXigfjKczPJpr9nFrpkSnJl4NcewU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+</div>
+<div class="p-5">
+<p class="font-headline text-xl font-semibold mb-1 group-hover:text-primary transition-colors">The Analog Mix</p>
+<p class="text-sm text-on-surface-variant line-clamp-2">Warmth, saturation, and depth using outboard gear.</p>
+</div>
+</div>
+<!-- Course Card 3 -->
+<div class="flex-1 bg-surface rounded-xl overflow-hidden group hover:shadow-xl transition-all duration-300">
+<div class="h-40 overflow-hidden relative">
+<img alt="Vocal Tracking" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="detailed close-up of a high-end condenser microphone on a stand with a pop filter in a recording booth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDHSwTvBj6UefMMWjRD119d2WH7s15SKQLS31pxixAY9q74Q3Ui8XuRULjpPnrUSUiBZTIgXtcoTd4EniVMTJDApPpIZxg91j4NkriG5oZNm7x-s7bjOquWQrH9UuJBdivUn_6djQehmJdMtnpfooKv4dpw4NGgaiVeGTXNhl1gjUD5GDogqh9FH7mp-4Glg1Y_mNFc6F_BW61rM5cFDkNXBg9Y1Dr3AOJcpeYEb0xal5iPWP5yqf7IDhL3j9KbRC9DpTUnRJyZ4FG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+</div>
+<div class="p-5">
+<p class="font-headline text-xl font-semibold mb-1 group-hover:text-primary transition-colors">Vocal Sculpting</p>
+<p class="text-sm text-on-surface-variant line-clamp-2">Capturing the perfect performance in any room.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Share Row -->
+<footer class="mt-24 pt-8 border-t border-outline-variant/10 w-full flex flex-col items-center gap-6">
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant font-bold">Share your Pro status</p>
+<div class="flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-[#1DA1F2] transition-colors" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path></svg>
+</a>
+<a class="text-on-surface-variant hover:text-[#E4405F] transition-colors" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a class="text-on-surface-variant hover:text-[#0077b5] transition-colors" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+</div>
+<p class="text-[10px] text-on-surface-variant/40 mt-4">Analog Master © 2024 • Editorial Design for Musicians</p>
+</footer>
+</main>
+</body></html>

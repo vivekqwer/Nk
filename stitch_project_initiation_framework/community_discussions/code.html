@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Studio | Harmony LMS Community</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Work+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "background": "#fff9ec",
+                        "secondary-fixed": "#8cf5e4",
+                        "on-surface-variant": "#5b403f",
+                        "on-primary-fixed": "#410007",
+                        "surface-tint": "#bb152c",
+                        "surface-container-low": "#faf3e2",
+                        "secondary-container": "#8cf5e4",
+                        "on-secondary-container": "#007166",
+                        "on-background": "#1e1c12",
+                        "outline-variant": "#e4bebc",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#92001c",
+                        "tertiary-container": "#a96428",
+                        "surface-dim": "#e0dac9",
+                        "surface-container-high": "#eee8d7",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#f4eddd",
+                        "outline": "#8f6f6e",
+                        "on-primary-container": "#fffbff",
+                        "inverse-surface": "#333025",
+                        "tertiary": "#8b4c11",
+                        "surface-variant": "#e9e2d2",
+                        "secondary": "#006a60",
+                        "on-tertiary-container": "#fffbff",
+                        "tertiary-fixed-dim": "#ffb780",
+                        "primary": "#b7102a",
+                        "on-surface": "#1e1c12",
+                        "surface-container-highest": "#e9e2d2",
+                        "surface": "#fff9ec",
+                        "primary-container": "#db313f",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#ffb3b1",
+                        "on-tertiary-fixed-variant": "#6f3800",
+                        "secondary-fixed-dim": "#6fd8c8",
+                        "tertiary-fixed": "#ffdcc4",
+                        "inverse-on-surface": "#f7f0df",
+                        "on-secondary-fixed": "#00201c",
+                        "primary-fixed-dim": "#ffb3b1",
+                        "primary-fixed": "#ffdad8",
+                        "on-secondary-fixed-variant": "#005048",
+                        "on-tertiary-fixed": "#2f1400",
+                        "surface-bright": "#fff9ec",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Work Sans", "sans-serif"],
+                        "label": ["JetBrains Mono", "monospace"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Work Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .serif { font-family: 'Newsreader', serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .tonal-shift { transition: background-color 0.3s ease; }
+        .glow-primary:active { box-shadow: 0 0 0 4px rgba(230, 57, 70, 0.18); }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-fixed-dim">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-[#fff9ec]/90 backdrop-blur-md shadow-[0_12px_28px_rgba(26,26,46,0.05)] flex justify-between items-center px-8 h-20">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black italic text-primary font-headline tracking-tight">Harmony LMS</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-stone-600 font-medium hover:text-primary transition-colors duration-200" href="#">Courses</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-bold" href="#">Community</a>
+<a class="text-stone-600 font-medium hover:text-primary transition-colors duration-200" href="#">Resources</a>
+<a class="text-stone-600 font-medium hover:text-primary transition-colors duration-200" href="#">Library</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="bg-surface-container rounded-full px-4 py-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48" placeholder="Search discussions..." type="text"/>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">settings</button>
+<img alt="User profile avatar" class="w-10 h-10 rounded-full border-2 border-primary-fixed" data-alt="Close up portrait of a male musician with short hair and a thoughtful expression, soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANACbZ60DbJ80OXwK9iM7nPy-uP4UDFTYEH5XVp1-YeCdkEgq5ZZ3VQiImOcOaRPS-CsWoljb3FKgY3XSKb7rOPxzx-qv84EbI-YDxzmKPwQE4xR0ckWCpSO18bM0bMbol9m7qrM01hKrireAYArBvXGVxnTeDzF9UagKxClmttVn7Q-VhDQutDt8EWAImBoSP_GVs68fss1EBuoJh-tWQ1Mm3B1XKP_vqQb6sXCaMrHPTMrtYwXZiDRJ3GHy9Qpy50loqai7FR7Bz"/>
+</div>
+</header>
+<div class="pt-24 pb-12 px-8 max-w-[1340px] mx-auto flex gap-8">
+<!-- Left Sidebar: Categories -->
+<aside class="w-[220px] flex-shrink-0">
+<div class="sticky top-28 space-y-8">
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold shadow-lg hover:scale-[1.02] transition-transform active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add</span>
+                    New post
+                </button>
+<nav class="flex flex-col space-y-1">
+<div class="px-3 mb-2 text-xs font-label uppercase tracking-widest text-outline">Navigation</div>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary text-white rounded-xl shadow-[0_0_0_4px_rgba(230,57,70,0.18)] font-bold" href="#">
+<span class="material-symbols-outlined">forum</span> All posts
+                    </a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-500 hover:bg-surface-container-low rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">person_add</span> Following
+                    </a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-500 hover:bg-surface-container-low rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">history</span> My posts
+                    </a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-500 hover:bg-surface-container-low rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">bookmark</span> Saved
+                    </a>
+</nav>
+<nav class="flex flex-col space-y-1">
+<div class="px-3 mb-2 text-xs font-label uppercase tracking-widest text-outline">Instruments</div>
+<a class="flex items-center justify-between px-4 py-2 text-stone-500 hover:text-primary transition-colors" href="#">Guitar <span class="text-[10px] mono opacity-60">124</span></a>
+<a class="flex items-center justify-between px-4 py-2 text-stone-500 hover:text-primary transition-colors" href="#">Piano <span class="text-[10px] mono opacity-60">86</span></a>
+<a class="flex items-center justify-between px-4 py-2 text-stone-500 hover:text-primary transition-colors" href="#">Production <span class="text-[10px] mono opacity-60">210</span></a>
+<a class="flex items-center justify-between px-4 py-2 text-stone-500 hover:text-primary transition-colors" href="#">Theory <span class="text-[10px] mono opacity-60">45</span></a>
+<a class="flex items-center justify-between px-4 py-2 text-stone-500 hover:text-primary transition-colors" href="#">Feedback <span class="text-[10px] mono opacity-60">12</span></a>
+<a class="flex items-center justify-between px-4 py-2 text-stone-500 hover:text-primary transition-colors" href="#">Gear <span class="text-[10px] mono opacity-60">56</span></a>
+</nav>
+</div>
+</aside>
+<!-- Main Content: Feed -->
+<main class="w-[720px] flex-shrink-0 space-y-8">
+<!-- Filter Bar -->
+<div class="flex items-center justify-between pb-2 border-b border-outline-variant/20">
+<div class="flex gap-8">
+<button class="font-headline text-xl font-bold text-primary border-b-2 border-primary">Latest</button>
+<button class="font-headline text-xl text-outline hover:text-primary transition-colors">Top</button>
+<button class="font-headline text-xl text-outline hover:text-primary transition-colors">Unanswered</button>
+<button class="font-headline text-xl text-outline hover:text-primary transition-colors">Featured</button>
+</div>
+</div>
+<!-- Quick Create Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/10 flex gap-4">
+<img alt="Avatar" class="w-12 h-12 rounded-full" data-alt="Portrait of a creative professional in a music studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5NXZNzEtoKFooFDmjpBzmRweDXJnrxqi3a7XyCC3pakbZGxKHkDFxDMY9pUL-tNviguGuCC2WLYWvjcfrvx0dgf22uPVU74W2tQGHkotbfzH_B4h5Vnwc0USqu4a6ao8bRq2CKe_cOaKCGZwHtpzezf70vOwAcBLMSYoGi84zJJl2ljo39pp4pvApyNzzZgy2Yk0QQhru2IhnTl0kI50EbZVJobjG3GICuWnP_IUloFP1z_Hq-covdWRUS3PkITGx9jJoOICn6sgt"/>
+<div class="flex-1 bg-surface-container-low rounded-xl px-5 py-3 text-stone-400 cursor-text hover:bg-surface-container transition-colors">
+                    Share something with the community…
+                </div>
+<div class="flex items-center gap-3">
+<button class="material-symbols-outlined text-secondary hover:bg-secondary-container p-2 rounded-lg transition-colors">image</button>
+<button class="material-symbols-outlined text-tertiary hover:bg-tertiary-fixed p-2 rounded-lg transition-colors">mic</button>
+</div>
+</div>
+<!-- Feed Post 1 -->
+<article class="bg-surface-container-lowest rounded-2xl p-8 shadow-sm border border-outline-variant/10 space-y-6">
+<div class="flex justify-between items-start">
+<div class="flex gap-4">
+<img alt="Sarah Miller" class="w-12 h-12 rounded-full object-cover" data-alt="Woman with long hair laughing, outdoors with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiVqOXNfiGwqvNH-6xCRBlHAZydjV2IKTPHgPSauwt8gP4V99iJzpKg7V8Ec9vC2O_X09A8kG8RuN9B7wM1fO5YAUw6BKeQvDU-mUnjl1NbGPTV9RQfPNqPAaLpKsWnYffcg5RRagt_GQdHKJXLCvMLxuFLRUkurKavPHeqHAOh8NabRLn8u3osorcC0u3T7swbwbbRxwfLXPVWz0o9ERHJlz3ssuxh9mYTXqB1jVopDVurgxfmh3a7CIpyeRQPIrvdpT90_HFr5-_"/>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface">Sarah Miller</span>
+<span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container text-[10px] mono uppercase rounded-md font-bold">Guitarist</span>
+</div>
+<span class="text-xs text-outline font-label">2 hours ago in #Production</span>
+</div>
+</div>
+<button class="material-symbols-outlined text-outline">more_horiz</button>
+</div>
+<div class="space-y-3">
+<h2 class="font-headline text-2xl font-medium tracking-tight">Tips for recording clean electric guitar without a DI box?</h2>
+<p class="text-stone-600 leading-relaxed">I've been struggling with some ground hum in my home studio. Any recommendations for cable routing or shielding that won't break the bank? Looking for that crisp analog sound...</p>
+</div>
+<div class="relative group cursor-pointer overflow-hidden rounded-2xl bg-surface-container-high p-6 flex items-center gap-4">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<div class="flex-1 space-y-1">
+<div class="flex justify-between text-[10px] mono text-outline uppercase">
+<span>Audio Sample - Hum Test.wav</span>
+<span>00:24</span>
+</div>
+<div class="h-8 flex items-center gap-1">
+<div class="h-2 w-1 bg-primary rounded-full"></div>
+<div class="h-4 w-1 bg-primary rounded-full"></div>
+<div class="h-6 w-1 bg-primary rounded-full"></div>
+<div class="h-3 w-1 bg-primary rounded-full"></div>
+<div class="h-8 w-1 bg-primary-container rounded-full"></div>
+<div class="h-5 w-1 bg-primary-container rounded-full"></div>
+<div class="h-2 w-1 bg-primary-container rounded-full"></div>
+<div class="h-7 w-1 bg-outline-variant rounded-full opacity-30"></div>
+<div class="h-4 w-1 bg-outline-variant rounded-full opacity-30"></div>
+<div class="h-6 w-1 bg-outline-variant rounded-full opacity-30"></div>
+<div class="h-2 w-1 bg-outline-variant rounded-full opacity-30"></div>
+<div class="h-5 w-1 bg-outline-variant rounded-full opacity-30"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-surface-container">
+<div class="flex gap-6">
+<button class="flex items-center gap-2 text-stone-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">favorite</span>
+<span class="text-sm mono">24</span>
+</button>
+<button class="flex items-center gap-2 text-stone-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">chat_bubble</span>
+<span class="text-sm mono">12</span>
+</button>
+</div>
+<div class="flex gap-4">
+<button class="material-symbols-outlined text-stone-500 hover:text-primary transition-colors">share</button>
+<button class="material-symbols-outlined text-stone-500 hover:text-primary transition-colors">bookmark</button>
+</div>
+</div>
+</article>
+<!-- Feed Post 2 (With Instructor Badge) -->
+<article class="bg-surface-container-lowest rounded-2xl p-8 shadow-sm border border-outline-variant/10 space-y-6">
+<div class="flex justify-between items-start">
+<div class="flex gap-4">
+<img alt="David Chen" class="w-12 h-12 rounded-full object-cover" data-alt="Young man with curly hair and glasses smiling, natural outdoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSv0bngJtKCfd_92W_vxfoRWGkfoMucgwF39EpeXqMnmqbl2snpsveISNtEFhRGEZtcamePX0yoHOVvpa6V1BAkwU5WWIdn9mlc0_4O6A_zLGacHz8s8esBws_wnPJH10iJQYbb6YEHXc2-p9i9xiQd60KTY-mKhqPlcGv8A2ptn8MrkyYaEBDlSZO52u7OMc4KLMkhWp4d_dbjLcToH1MNkE7IoWSXGSrwrcDOGlEf8Sn0tj7NLQmNd_2Kvtdbte0O6Lp049xj76C"/>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface">David Chen</span>
+<span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container text-[10px] mono uppercase rounded-md font-bold">Producer</span>
+</div>
+<span class="text-xs text-outline font-label">5 hours ago in #Gear</span>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-secondary/10 px-3 py-1 rounded-full text-secondary text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+                        Instructor Reply
+                    </div>
+</div>
+<div class="space-y-3">
+<h2 class="font-headline text-2xl font-medium tracking-tight">The ultimate pedalboard setup for jazz fusion</h2>
+<p class="text-stone-600 leading-relaxed">Just finished wire-managing the new touring board. Combining the analog warmth of the Klon-style drive with some digital delay was the game changer for my mid-range clarity.</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<img alt="Pedalboard close up" class="rounded-2xl h-48 w-full object-cover" data-alt="Detailed close-up of a guitar pedalboard with colorful knobs and glowing LEDs in a dark studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeEBo-K8xgv1A7JQSawMr4BOgevGliFNvfstBVZcPTPkyEdLXiJgdHAE2UAhBZSRLs4RFVRbcrRF5iKimICR70xxa3Wnj3N99g4RoyB-x_kdmHharAOkTxS7Fy8BVKZwtrWrGMmV2KXdIhMCay1_dv514RdAiOKdXwpY27lD0LmtAHx3ac7Zyn06FaHvciwupYglQcETPT_fYaF2q_UF6cuYQPVAJuYNQiaC7m7tffefR8VUpVVRU1Pg_uEz-trbRKSGkCq8SjdYqk"/>
+<img alt="Studio desk" class="rounded-2xl h-48 w-full object-cover" data-alt="Sleek modern recording studio desk with monitors and audio equipment under atmospheric blue light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAExJyNhqapOBqp2j05e_h2buyuu7jxL6cmyG06I1twlFTQ4yGFQak2Ggly186Tv2EDxYiaVFiB5Wkal8gCkugKXiX31x2psHI0tbBb-dYvZh7ANpmL5jwE1vBxTfaoqXBETjQuMRjB9q-nECD43Zbw5t6vpjqKKSFksO3MOf7Tv57cnu_LHoL718UyEnBJTFPDXbH1_Qj5qtyvw0E3zJZe34KJ2KpCVe02l-NJ0i6ZeIxZAPSwpjGB8S0oQiQjpWGdZqzU1Xvk6ElJ"/>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-surface-container">
+<div class="flex gap-6">
+<button class="flex items-center gap-2 text-stone-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">favorite</span>
+<span class="text-sm mono">142</span>
+</button>
+<button class="flex items-center gap-2 text-stone-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">chat_bubble</span>
+<span class="text-sm mono">45</span>
+</button>
+</div>
+<div class="flex gap-4">
+<button class="material-symbols-outlined text-stone-500 hover:text-primary transition-colors">share</button>
+<button class="material-symbols-outlined text-stone-500 hover:text-primary transition-colors">bookmark</button>
+</div>
+</div>
+</article>
+</main>
+<!-- Right Sidebar -->
+<aside class="w-[280px] flex-shrink-0">
+<div class="sticky top-28 space-y-8">
+<!-- Trending Section -->
+<section class="bg-surface-container-low rounded-2xl p-6">
+<h3 class="font-headline text-xl font-bold mb-4">Trending this week</h3>
+<ul class="space-y-4">
+<li>
+<a class="group block" href="#">
+<p class="text-xs font-label uppercase tracking-widest text-outline mb-1">#Theory</p>
+<p class="font-bold text-on-surface group-hover:text-primary transition-colors">Understanding the Phrygian Dominant mode</p>
+<p class="text-[10px] mono text-stone-500 mt-1">42 replies • 120 likes</p>
+</a>
+</li>
+<li>
+<a class="group block" href="#">
+<p class="text-xs font-label uppercase tracking-widest text-outline mb-1">#Production</p>
+<p class="font-bold text-on-surface group-hover:text-primary transition-colors">Best budget microphones for vocal recording in 2024</p>
+<p class="text-[10px] mono text-stone-500 mt-1">89 replies • 310 likes</p>
+</a>
+</li>
+<li>
+<a class="group block" href="#">
+<p class="text-xs font-label uppercase tracking-widest text-outline mb-1">#Gear</p>
+<p class="font-bold text-on-surface group-hover:text-primary transition-colors">NAMM 2024: New synth reveals discussion</p>
+<p class="text-[10px] mono text-stone-500 mt-1">56 replies • 95 likes</p>
+</a>
+</li>
+</ul>
+</section>
+<!-- New Members -->
+<section class="bg-surface-container-low rounded-2xl p-6">
+<h3 class="font-headline text-xl font-bold mb-4">New members</h3>
+<div class="flex flex-wrap gap-3">
+<img alt="User" class="w-10 h-10 rounded-full border-2 border-white shadow-sm" data-alt="Portrait of a young woman with a vibrant personality" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ1QzMgltAS7_hl02PJxcIjiVED1VwC9WBLhAzw1l2d8OCttNcpsjWLXAWshqe--v7Jjqy3aqem4sbz7UJLRlsNnUSj8sHuYhrqVkH6prVhr7kT3DJlyiCFfpCP8FAh9EsOhaOmOA5pWg3zIylx-fD8GdPZkBEY2DtB58BzVUEG7aotqd0_j5MoBisKl6frZcf0_XIjOgCCECTzJZfE3KgIgkU9M2DZWhuzvBwIpqw9QnccoLjSrSEIGIitbbV6j2C9WaaV91oYKYP"/>
+<img alt="User" class="w-10 h-10 rounded-full border-2 border-white shadow-sm" data-alt="Portrait of a male artist in creative lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM1ZFjk0_162N_zRJA8prOTkuSx-zSumTZmlTq5g2JmoOBRQe93s0oCX7FdXhzMk53CMoTrwLUTi2a3eh4m6460TAOd_KIdPaUlLSvXPrcvjl045eCibqXIFT5WgN4tkM-OjESQcNo5ZBwE3WyHatyRUDTSdRv7C07zajIBElB4o0fhPk_z8IezsVPwPAnFBHb2_RedgG_vFIdgArdJ2HMqEE-5u0iGCwROGbmidqk5-yASg3ph8aCmWMXHyqY1doAS4suPjXSSSKV"/>
+<img alt="User" class="w-10 h-10 rounded-full border-2 border-white shadow-sm" data-alt="Close up of a man with spectacles in a professional setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUztXRe0Jk5WvyFZ049JEyMA_iPi7MsosBzKhV6CPtGBHfGBFgMZKFBegS7ThhQ1gxRJwmPNjZFeVlCzledsuFfYY7-HaO7FD1Hm26Wnw73yJr3Bin4N8u0LT7JZseN4EdMxgoTgIy4ZDZ2dst3h3vGoLAZIpnDLLQWpiTLYW-o6IuQSsN6n_D19uOHdJ-R-occTtSYvR6nLDRD2lgbmleiInTWM_3JrRc7CmvBRvvwKard7Ge74eUmsJWoEesHomr1DgYdSE_-d47"/>
+<img alt="User" class="w-10 h-10 rounded-full border-2 border-white shadow-sm" data-alt="Elegant woman portrait with natural daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj6UK02QqmMI8aODHv82QpSC_p6QSXnAbqJMRGnFnx1Xa4-p77L0sSPkTBqLjjETk2MTQiwd7nSd-NWkWz7OzzQzuCjY-mpGAzbh3Fb63sD7brgS2qWWKTc6-QKI0AV4PHuzdtb7-3yWEE74-1z3Yy7w1FodquD1zt3Ij3SRg29u3OBSvhs_i598Sf4h-EthgmjIheNpEFLVk2fjx4wnvMJWgLMjOoW4cWGQrzgIZZmxWa5u2gN6JzJtaxqnMvp3tzfB3L0PvTBwJW"/>
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary text-xs font-bold">+12</div>
+</div>
+</section>
+<!-- Guidelines Card -->
+<section class="bg-inverse-surface rounded-2xl p-6 text-inverse-on-surface relative overflow-hidden shadow-xl">
+<div class="relative z-10">
+<h3 class="font-headline text-xl font-bold mb-3">The Studio Rules</h3>
+<p class="text-sm opacity-80 mb-4 leading-relaxed">We maintain a professional, respectful space for creative growth.</p>
+<ul class="space-y-2 text-xs">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-tertiary-fixed-dim">check_circle</span> Be constructive with feedback</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-tertiary-fixed-dim">check_circle</span> No self-promotion outside #Gear</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-tertiary-fixed-dim">check_circle</span> Credit your fellow artists</li>
+</ul>
+</div>
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-8xl opacity-10">library_music</span>
+</section>
+</div>
+</aside>
+</div>
+</body></html>

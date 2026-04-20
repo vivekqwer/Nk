@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Onboarding - Pick Your Genres | The Analog Master</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&amp;family=Work+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-container": "#fffbff",
+                      "tertiary": "#8b4c11",
+                      "on-secondary-fixed-variant": "#005048",
+                      "on-background": "#1e1c12",
+                      "on-primary-fixed": "#410007",
+                      "primary-fixed": "#ffdad8",
+                      "tertiary-fixed-dim": "#ffb780",
+                      "secondary": "#006a60",
+                      "on-tertiary": "#ffffff",
+                      "outline-variant": "#e4bebc",
+                      "surface-tint": "#bb152c",
+                      "tertiary-fixed": "#ffdcc4",
+                      "surface-dim": "#e0dac9",
+                      "primary-container": "#db313f",
+                      "primary-fixed-dim": "#ffb3b1",
+                      "on-tertiary-fixed-variant": "#6f3800",
+                      "surface-container-low": "#faf3e2",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed-dim": "#6fd8c8",
+                      "secondary-fixed": "#8cf5e4",
+                      "tertiary-container": "#a96428",
+                      "surface-container-highest": "#e9e2d2",
+                      "on-primary-container": "#fffbff",
+                      "on-secondary-fixed": "#00201c",
+                      "inverse-surface": "#333025",
+                      "on-primary": "#ffffff",
+                      "on-surface": "#1e1c12",
+                      "on-primary-fixed-variant": "#92001c",
+                      "on-surface-variant": "#5b403f",
+                      "error": "#ba1a1a",
+                      "outline": "#8f6f6e",
+                      "inverse-on-surface": "#f7f0df",
+                      "primary": "#b7102a",
+                      "surface-container": "#f4eddd",
+                      "surface-bright": "#fff9ec",
+                      "on-error": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-container": "#8cf5e4",
+                      "surface": "#fff9ec",
+                      "on-tertiary-fixed": "#2f1400",
+                      "surface-variant": "#e9e2d2",
+                      "on-secondary": "#ffffff",
+                      "inverse-primary": "#ffb3b1",
+                      "error-container": "#ffdad6",
+                      "surface-container-high": "#eee8d7",
+                      "on-secondary-container": "#007166",
+                      "background": "#fff9ec"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {},
+              "fontFamily": {
+                      "headline": ["Newsreader", "serif"],
+                      "body": ["Work Sans", "sans-serif"],
+                      "label": ["JetBrains Mono", "monospace"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-primary {
+            box-shadow: 0 0 0 4px rgba(230, 57, 70, 0.18);
+        }
+        .editorial-asymmetry:nth-child(even) {
+            margin-top: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col">
+<!-- Progress Header -->
+<header class="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-xl px-6 py-6">
+<div class="max-w-4xl mx-auto flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="text-primary font-headline text-2xl font-black italic tracking-tight">The Analog Master</span>
+<a class="font-label text-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Skip for now</a>
+</div>
+<!-- Progress Bar: 3 segments, 1st active -->
+<div class="flex gap-2 w-full h-1">
+<div class="flex-1 bg-primary rounded-full"></div>
+<div class="flex-1 bg-surface-container-highest rounded-full"></div>
+<div class="flex-1 bg-surface-container-highest rounded-full"></div>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-32 pb-32 px-6 overflow-y-auto">
+<div class="max-w-4xl mx-auto">
+<!-- Headline Section -->
+<div class="mb-12">
+<h1 class="font-headline text-6xl md:text-7xl font-bold italic text-on-background -tracking-widest leading-none mb-4">
+                    What moves you?
+                </h1>
+<p class="font-body text-xl text-on-surface-variant max-w-xl">
+                    Select the genres that define your sound. We'll curate your studio experience based on these rhythms.
+                </p>
+</div>
+<!-- Genre Grid (Bento/Asymmetric style) -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pb-12">
+<!-- Genre Card: Rock (Selected) -->
+<div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-container-low transition-all duration-300 ring-4 ring-primary glow-primary">
+<img alt="Rock Music" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 opacity-60" data-alt="Close-up of a vintage electric guitar and amplifier in a dimly lit studio with red neon accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBncKdt4O5UWAzvNWTcj434Kjx4rGp9jZ7blw3mO8plwkD5hwiUAqbk7NBJYo3YH2968IpIRxPY2KHQBLJ5EovasA7gbPFxA30suAZcvlzyLE6Z9Xmh7LZJYpbOm3uxpsdTHhLH9NCKVyukfbtAe4C9eBqS7jzKXy87E6KawX0ZtD7VJTUW6-GYg-hRCP25zwautAs9rjR00-EBsBYGb8ADXHWsu8Ty2IGFjdR8CFeVdmeglIrx-TeTLVlKR9raM1TjIAcSaAiLa-n7"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="font-headline text-2xl italic text-white font-bold">Rock</span>
+</div>
+<div class="absolute top-4 right-4 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<!-- Genre Card: Jazz -->
+<div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-container-low hover:bg-surface-container transition-all duration-300 editorial-asymmetry">
+<img alt="Jazz" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 opacity-40" data-alt="Brass saxophone resting on a dark velvet chair under a single warm spotlight in a smoky jazz club" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVA4S8iWWViYH7wgzR6IJ1KKOfkXIYgeiZjxa2g-BDz3UWTPYew4nsrFKvVpAIttg94qm5bRe-VWfRB6ouflXNBtk_5gY-EHEkZCW9y_UkaZOt8mnKWSaFNasu0XMZgK4-h0LOSBCAfWrjfV0Hy7ldPTnSXldJ_0vkIQZ7abzX3DgaERzJ65w6gerYrHkOyq7AEeSo5CGZKudm16mddKLRtGHyNA1vF21Qne2MSTL4JdtCiUzbUC8FjgLiFhFpGPke-wfqFYVOFKh5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="font-headline text-2xl italic text-on-surface font-bold">Jazz</span>
+</div>
+</div>
+<!-- Genre Card: Pop -->
+<div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-container-low transition-all duration-300 ring-4 ring-primary glow-primary">
+<img alt="Pop" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 opacity-60" data-alt="Colorful abstract shapes and vibrant pink and purple lighting reflecting on a dance floor surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjjxDnjpnAsEbfx2LDTns4egWRuRaBiBL_8s1_4V4lgB8rSk7Gb5cUQQB43txiHCXauzdVjuA7jm0T5h3Nld9XWGovCK1ELn7HxJcYi7us52dKOW5Oj0shNXPtgGiXJ9sWiY6WACSFv2vPoqd7qDypwPrOJPsOFoeSTMNRVeQfna_CpOcUhLpiYzX7ROYJfoMBNn3Q_w3y64J_0ITVH8GoWhxfk0JKsIK2bj6uBDYm_dZG4xjEc_TRazgwoFZnGywesVT0HEJLYF1t"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="font-headline text-2xl italic text-white font-bold">Pop</span>
+</div>
+<div class="absolute top-4 right-4 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<!-- Genre Card: Electronic -->
+<div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-container-low hover:bg-surface-container transition-all duration-300 editorial-asymmetry">
+<img alt="Electronic" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 opacity-40" data-alt="Modular synthesizer knobs and patch cables in a futuristic dark room with glowing blue and violet lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuTH4IeGRW-899eYS6lQY5I_ZQOZIBtUk9nJPnuJi5megxMaoSwGOPz9cmPtgFxIcBIalErHaVJl6at7syIElMFIlR7IMWKDfIT8NNOG4jwpQ-PzyS_mtC_9rHih12mYQW3VqCYXOaQGEULbBFehsvKq56SRWUeAfUpGu8awWcB4lfdGZKeiDipoW5W9m-ZetC6fNfgT__JzwKsVIUol7Bo8pCY3YT5NHTKcopl2497jACcSwnSH3RpH6HcumwcjjJVgB7QnqrfG5v"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="font-headline text-2xl italic text-on-surface font-bold">Electronic</span>
+</div>
+</div>
+<!-- Genre Card: Hip Hop -->
+<div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-container-low hover:bg-surface-container transition-all duration-300">
+<img alt="Hip Hop" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 opacity-40" data-alt="Graffiti-covered urban wall with a silver boombox in front, high-contrast dramatic city lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5_e4hXAnHkLH5eqilDZkxJ_DW7nVKe-k2cDDTVXov5gOL5QkwqNIlVOUbig-LJ3wJ8oRrP_8Azv2jxMNajnNY4ZLgEYqLccWAnGm_DYuzyTIJTV9ZE0aYQplIDMU-O7Uec-16Zkf9GjMF4piYJfv-89ZrQICKhguvmXnzHG-4cp2WX6rngRuTBW_AH5oM-Pn-ElHX-VOv78_WqNcWFEUB1yCNiJMKLYCwpqmcMns1qLZx-7rLBFdsA6pLH4ILlpsxeg1dfwBiKYLB"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="font-headline text-2xl italic text-on-surface font-bold">Hip Hop</span>
+</div>
+</div>
+<!-- Genre Card: Classical -->
+<div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-container-low hover:bg-surface-container transition-all duration-300 editorial-asymmetry">
+<img alt="Classical" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 opacity-40" data-alt="Elegant grand piano keys in a sun-drenched library with dust motes dancing in the light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMNYK8JV3rKMWSA1Ct33FaS3zDbN8ijuaL3nHYRcEWn2B4DYr-wmC2T7FdecezNX8oa2XCOmwH4od2JxiqeQJYAP3C7iAlfEKa39Iz7YRIfF8Y5pcb0FtT6fCTXEDSmdf9OZZxNpI1_xcctgOxTl0lW3CJT-ztsj7g8yJQuCyKHkX5CjJwV0pg1XDo-UpI_Xe3v9-4BYzCnOGXwlDjktdL-jrO0fN1d_cRtSDmD4Xc0vHCkzWMXhMRf_HT5_adCFldsQFvBYw_lNVh"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="font-headline text-2xl italic text-on-surface font-bold">Classical</span>
+</div>
+</div>
+<!-- Genre Card: Blues -->
+<div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-container-low hover:bg-surface-container transition-all duration-300">
+<img alt="Blues" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 opacity-40" data-alt="Worn acoustic guitar resting against a wooden porch wall in the Mississippi delta at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvfTg4pvoO97CAZVH_K_m-6JXwq8h8lJDV2hQXFbfQvcMZt-Qtj6D4UsGMIJbsgBZWj4ysvNc3rvJZQ-UsYDInMW-iD6TL0ubNaQtCsXMuqwBjaZv8EHEk_1-dh2hlxvV9GwqxMMntJHnVfB5I8WgqPevgSabDnuIeQaWNMYPFCbkziNwznZ-6-cB4kKG4ETRqGH7Wxef0KUoKzrkdQMU6wjqRN_gPWP_vf8IEvZq510x94GFVrP0swcNYg3dgxeM5LOFBg7ntrvgB"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="font-headline text-2xl italic text-on-surface font-bold">Blues</span>
+</div>
+</div>
+<!-- Genre Card: R&B -->
+<div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-container-low hover:bg-surface-container transition-all duration-300 editorial-asymmetry">
+<img alt="R&amp;B" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 opacity-40" data-alt="A vintage microphone on a stand in a moody recording booth with warm ambient glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1GhlbRuwChvH6kh2t4AJDe0LwZYFtNEVfVy1YDHueQ7j-YFxREVVtKEzi2FZqTS3qTlFWhsHLHRxUZ4IGZ30GRw6A4A4bASkMSok0ovJkipBR8XzYm7gNyAXlU-_LeHZW8fRzuVkbGdmMuvtLPu-VO31sRsBFGYShNoP0dEteqGNSpSTVrU9smzn9WINWMMNfA-3t5dJPpjtdwkNIpmS6KeLPYAkZJDIOlI4TP1_AjEa-LzvoFeqsel1glw06EPwwrQS9pn7pHzMM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="font-headline text-2xl italic text-on-surface font-bold">R&amp;B</span>
+</div>
+</div>
+<!-- Genre Card: Folk -->
+<div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-container-low hover:bg-surface-container transition-all duration-300">
+<img alt="Folk" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 opacity-40" data-alt="People gathered around a campfire in the mountains under a starry night sky with a banjo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnRftTePPU8mkaO3w1piidUONZw4Z8VbUfMxf7Zv5Kuq0m5wl3a6rQ49GbbKOxjsF8RvVrB3K43kRaI3oo7tjb0t1mxbpoDi1IFHrplakXtKojWetDH96b9kORMSwcrPeNqIAz-zU2yJj8bk915B_iJTYI-BmKJ6FuSKRIRgUa5t3G9JHXOEQvxGvaCjzc4x-Z7n7hA680YW9NL4xDcfttdVkddbTWTiYOA_pyGBzqlJA8Hl3LY2FftLQDxzR01TXHwyEsNGp1rNdS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="font-headline text-2xl italic text-on-surface font-bold">Folk</span>
+</div>
+</div>
+<!-- Genre Card: Metal -->
+<div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-container-low hover:bg-surface-container transition-all duration-300 editorial-asymmetry">
+<img alt="Metal" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 opacity-40" data-alt="A drum set with intense stage lighting and heavy shadows, high-energy live performance vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUexnVQkwl0iAfmED-LCyIdi_meDdw3K04mi2e7vAX_r3m1bljRCC4ou9xVZ1Q9Vin6tiBy6KIYu3_kvAVNDhpkufyVhL8VTNesZomb7aD2mI0D81drKOUR1c8aRAByjZWt7cb9rmZqm0TN9dfxCq17XsoWiFWhQx6jvBFxSCajQ5acfpPRsG1viGaySG8QQ6SCHbg8Vw4Sj53NPFGbH-OQG1D58nbqBo72-2f9qlgAu9vMnxUjRO1I9lvvmryZpeJNME0-evRQQPn"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="font-headline text-2xl italic text-on-surface font-bold">Metal</span>
+</div>
+</div>
+<!-- Genre Card: Lo-Fi -->
+<div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-container-low hover:bg-surface-container transition-all duration-300">
+<img alt="Lo-Fi" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 opacity-40" data-alt="Cozy bedroom desk with a cassette player, plants, and soft sunlight streaming through a window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOL9vmhDSlM3xywLv-5GN4jf5zwCE8K0_Wu9EQjw-P3gTqTantqa8_wpHTV2oGBrPGCdoRt1v8f-DlSHovwMDFwZQOGYokfFGX7cYc4-bacGYFmQnOeBcG1YaKABQEmGbsTB0rZlBQqDXReiyy75JSC4vLhsybNnPpOhUwk4tp--E1qvo_ifmVXl5LqQGJ4bfxQSOb4iq-HL4X66d-AZiwBIJfA_4w9WDsyQMtBmv_qwfJLTrjuwV52lOsUnOTfWFine0rT3QGlS_n"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="font-headline text-2xl italic text-on-surface font-bold">Lo-Fi</span>
+</div>
+</div>
+<!-- Genre Card: Soul -->
+<div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-container-low hover:bg-surface-container transition-all duration-300 editorial-asymmetry">
+<img alt="Soul" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 opacity-40" data-alt="Vintage vinyl record spinning on a wooden turntable with warm retro lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfaVOheo3fAQmgj-kKJ5vTRmTilOHfMpx5ba6bJ6W6rt3FI_sFJov5_ceQ9ouHznCjuRmHjtm21xSWb_gnleG-Ko6N5hlucDYzj6137xyUiFkbFJOP8fLi9OMDPHmAqoVsPC6XvDSMdv0vGt2W6UwOlv6fEG27xALgFtnr-t7ndlz2ahrs4V28kEFW0gRQB8-8CEE50ZDVDKBb7xoJQh_xlIEFQPc1HaPQDTSc91KlGE9ADGiWD9Cd3c48sUDewGYgtMxwnBpY32Ho"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="font-headline text-2xl italic text-on-surface font-bold">Soul</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Sticky Bottom Bar -->
+<footer class="fixed bottom-0 left-0 w-full z-50 bg-background/90 backdrop-blur-md px-6 py-8">
+<div class="max-w-4xl mx-auto flex items-center justify-between">
+<div class="hidden md:block">
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">2 of 12 Genres Selected</span>
+</div>
+<button class="w-full md:w-auto bg-primary text-on-primary font-body font-bold text-lg px-12 py-4 rounded-xl flex items-center justify-center gap-3 active:scale-95 transition-all shadow-md hover:brightness-110">
+                Continue
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</footer>
+</body></html>

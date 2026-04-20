@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Work+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fff9ec",
+                        "on-tertiary-container": "#fffbff",
+                        "primary-fixed": "#ffdad8",
+                        "inverse-on-surface": "#f7f0df",
+                        "on-primary-fixed-variant": "#92001c",
+                        "outline-variant": "#e4bebc",
+                        "secondary-container": "#8cf5e4",
+                        "on-primary-container": "#fffbff",
+                        "on-secondary-fixed-variant": "#005048",
+                        "surface-variant": "#e9e2d2",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#eee8d7",
+                        "on-secondary-container": "#007166",
+                        "primary": "#b7102a",
+                        "secondary-fixed-dim": "#6fd8c8",
+                        "primary-container": "#db313f",
+                        "on-surface": "#1e1c12",
+                        "surface-container-highest": "#e9e2d2",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1e1c12",
+                        "tertiary-fixed": "#ffdcc4",
+                        "on-secondary-fixed": "#00201c",
+                        "surface-dim": "#e0dac9",
+                        "surface-container-low": "#faf3e2",
+                        "secondary-fixed": "#8cf5e4",
+                        "secondary": "#006a60",
+                        "surface-container": "#f4eddd",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb780",
+                        "inverse-surface": "#333025",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#6f3800",
+                        "surface-bright": "#fff9ec",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#410007",
+                        "background": "#fff9ec",
+                        "surface-tint": "#bb152c",
+                        "on-surface-variant": "#5b403f",
+                        "tertiary-container": "#a96428",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#8b4c11",
+                        "inverse-primary": "#ffb3b1",
+                        "outline": "#8f6f6e",
+                        "primary-fixed-dim": "#ffb3b1",
+                        "on-tertiary-fixed": "#2f1400",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader"],
+                        "body": ["Work Sans"],
+                        "label": ["Work Sans"],
+                        "mono": ["JetBrains Mono"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .newsreader-hero { font-size: 56px; line-height: 1.1; letter-spacing: -0.02em; }
+        .glass-header { backdrop-filter: blur(20px); }
+        .course-card-shadow { box-shadow: 0 12px 28px rgba(26, 26, 46, 0.06); }
+        .glow-primary-hover:hover { box-shadow: 0 0 0 4px rgba(230, 57, 70, 0.18); }
+        .live-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-8 h-20 bg-[#fff9ec] dark:bg-stone-950 backdrop-blur-xl bg-opacity-80 shadow-sm dark:shadow-none">
+<div class="flex items-center gap-12">
+<span class="text-2xl font-bold font-serif text-[#e63946] dark:text-[#e63946] tracking-tight">Harmony</span>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#e63946] font-bold border-b-2 border-[#e63946] pb-1" href="#">Lessons</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#e63946] transition-colors duration-300" href="#">Masterclasses</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#e63946] transition-colors duration-300" href="#">Pricing</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container rounded-full px-4 py-2 w-[300px]">
+<span class="material-symbols-outlined text-on-surface-variant text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm font-body w-full ml-2 text-on-surface" placeholder="Search movements..." type="text"/>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-stone-600 cursor-pointer hover:text-[#e63946] transition-colors">music_note</span>
+<span class="material-symbols-outlined text-stone-600 cursor-pointer hover:text-[#e63946] transition-colors">notifications</span>
+<img alt="User profile avatar" class="w-8 h-8 rounded-full object-cover" data-alt="Professional portrait of a musician in a recording studio with soft warm lighting and vintage microphones in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJtlf4KSFAiGswU1kDGL23aSX-yxDg6iQ_iGLLtD0GJjP4BNI5htWBq3j9t8DkeuNhvaf5lstbBkfR2W-85Ked5x_7eTAMc6c6fpIeVkh-_1unlRXp0yH6asahhuSvofN0guYx7jWVsv8HRlMpYpIl055Wr68ZhFm5o6ai_mQ1NoZOKjYO9AgSWtY7N1gzI47f7Hf-V3URPlQUbDywmb4Maf0cRXQsLcJ-v-TaqpUnxtgRtEYVYg4tJLqUrno2PASV414kS8jXbBB8"/>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-24 px-8 max-w-[1600px] mx-auto">
+<!-- Hero Header Section -->
+<header class="mb-16">
+<h1 class="font-headline newsreader-hero text-on-surface font-bold">Explore the Harmony library</h1>
+<p class="mt-4 text-on-surface-variant max-w-2xl text-lg">Curated analog masterclasses and technical deep-dives for the modern sonic architect.</p>
+</header>
+<!-- Sticky Filter Bar -->
+<div class="sticky top-20 z-40 py-6 mb-12 bg-background transition-all duration-300">
+<div class="flex flex-col lg:flex-row gap-4 items-center justify-between">
+<div class="flex flex-wrap gap-3 items-center w-full lg:w-auto">
+<!-- Genre Dropdown -->
+<div class="relative group">
+<button class="flex items-center gap-2 px-6 py-3 bg-surface-container rounded-xl font-medium text-on-surface hover:bg-surface-container-high transition-all">
+<span>Genre</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+<!-- Level Filter Chips -->
+<div class="flex bg-surface-container p-1 rounded-xl">
+<button class="px-5 py-2 rounded-lg bg-primary text-on-primary text-sm font-semibold shadow-sm">All Levels</button>
+<button class="px-5 py-2 rounded-lg text-on-surface-variant text-sm font-medium hover:text-primary transition-colors">Beginner</button>
+<button class="px-5 py-2 rounded-lg text-on-surface-variant text-sm font-medium hover:text-primary transition-colors">Pro</button>
+</div>
+<!-- Technical Filter -->
+<button class="flex items-center gap-2 px-6 py-3 border border-outline-variant border-opacity-20 rounded-xl font-medium text-on-surface hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-lg">filter_list</span>
+<span>Advanced Filters</span>
+</button>
+</div>
+<!-- Expanded Search for Catalog -->
+<div class="w-full lg:w-[360px] relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-lowest border border-outline-variant border-opacity-10 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent font-body shadow-sm" placeholder="Find lessons, instruments, artists..." type="text"/>
+</div>
+</div>
+</div>
+<!-- Course Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+<!-- Course Card 1: Live Status -->
+<div class="flex flex-col group cursor-pointer">
+<div class="relative aspect-[4/3] mb-5 overflow-hidden rounded-2xl bg-surface-container-high transition-all duration-500 group-hover:-translate-y-1 glow-primary-hover">
+<img alt="Analog Synth Course" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up of a vintage analog synthesizer with colorful patch cables and glowing LED indicators in a dimly lit studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjJ5AyDf0vz-oOQTfKFLbNzG5SnhlMa4ga_AczAA7PRlySqJBWtyZ9-YcNjIQ8W998mQEy0r15zTQne93cMEAb-augfuSGZ90sdKJgqFaG03bTZ-5mWbHNPi3lhWZG9jlFwC7eVw8sLv8IDj1FWmwiMoQMs030EClJg5eb61nIloMmChI9ra-BZM_p-_oNBxlKuzLAJZsax1XwWhSvdSH0-BNRSim4KrpyfmMIydS_YJFUVtXVU2u5hO13kU4gd02rfZj4fH1tqwHb"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="flex items-center gap-1.5 bg-primary text-white text-[10px] font-bold font-mono px-2 py-1 rounded uppercase tracking-wider live-pulse">
+<span class="w-1.5 h-1.5 bg-white rounded-full"></span>
+                            Live
+                        </span>
+<span class="bg-surface-container-lowest/90 backdrop-blur text-on-surface text-[10px] font-bold font-mono px-2 py-1 rounded uppercase tracking-wider">Advanced</span>
+</div>
+</div>
+<div class="flex flex-col space-y-3">
+<span class="text-[10px] font-bold font-mono text-[#8338EC] uppercase tracking-widest bg-[#8338EC]/10 self-start px-2 py-0.5 rounded">Synthesis</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface leading-snug group-hover:text-primary transition-colors">The Architecture of Analog Drift</h3>
+<div class="flex items-center gap-3">
+<img alt="Instructor Avatar" class="w-6 h-6 rounded-full object-cover" data-alt="Portrait of an experienced music producer with headphones around neck, professional studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbELJrM9cbSeUqayNpI_hM1ygZOzJS9MoRCzbq3J5BSaS1fD90jWGAvf2vvDnh-scKcvaPE6zaOfpFYlrmskx1fVqx36Ef_5w2dsE5uQ75UYNaLUin9IjF31-VLUYo7pJmqG8gwvZr2SNeJn7_NcO4uNd61Oz_OaLLnh86y36lwCql3XP-QDPofl3ZHbTrHwnfFT0jrudqzBbn4dGJ3ve2yQoL5xjSY0kQ-x_GWDhvXZ3CVJTfntAN-5RphklAkMGxpygfjN7vMkMY"/>
+<span class="text-sm font-medium text-on-surface-variant">Marcus Thorne</span>
+</div>
+<div class="flex items-center gap-4 text-xs font-mono text-on-surface-variant pt-2">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">schedule</span> 6h 15m</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">layers</span> 24 lessons</span>
+</div>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="flex flex-col group cursor-pointer">
+<div class="relative aspect-[4/3] mb-5 overflow-hidden rounded-2xl bg-surface-container-high transition-all duration-500 group-hover:-translate-y-1 glow-primary-hover">
+<img alt="Piano Masterclass" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Elegant grand piano keys with soft shadows and cinematic warm lighting in a high-end music hall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB4Zjm6ZQydPZ7AOue0q9jNgy37XzGdPTk-qFDzVTqNpmMJbspGdINKbm0aM8nrgCb6wWdNwlZB5bivQs1Rx2wT7La-VoQ5r9_eLZCpt4BY6UQubpc13uHQVvx_ASVWqHgPXDvGAAlZRBnRNc4c6DlUFRnBYVz7D8qD9mzuq9WwUf52WCp_BPMZp7FqUE5IT1xTEkF6ZJS__eUl5O6it81jZj4b_FNEeep9ZDp2yPZIZmURl8jSTHegotf57w8DYMvQ90NHJsKi6cX"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-surface-container-lowest/90 backdrop-blur text-on-surface text-[10px] font-bold font-mono px-2 py-1 rounded uppercase tracking-wider">Intermediate</span>
+</div>
+</div>
+<div class="flex flex-col space-y-3">
+<span class="text-[10px] font-bold font-mono text-[#8338EC] uppercase tracking-widest bg-[#8338EC]/10 self-start px-2 py-0.5 rounded">Jazz Theory</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface leading-snug group-hover:text-primary transition-colors">Neo-Soul Piano Voicings</h3>
+<div class="flex items-center gap-3">
+<img alt="Instructor Avatar" class="w-6 h-6 rounded-full object-cover" data-alt="Close up portrait of a female pianist smiling in a brightly lit modern studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQbStA06_RLIaxmAW-H6e14KpX9GjfM6RFJwbgXwnQ3WdaS4z1v14eghW6ILrGtnPxKpU-POg0z2CtO91aSpZm9cuhPtjnLGHDEzQv23x6z3-d21H4R8l_9Ns075POK67S2wHW9qECBlSiixTP7FAXdzq_t24Usk9EYMV34KKHG8-HJyvI19V0tDNA2_7HQDVFiDnK_dtO-d6uPhshyxILAq45mQrEfql5FlWG0al1ZXJWxxkfY0zkhE5WipLhovwvNlyOkki7zgJ8"/>
+<span class="text-sm font-medium text-on-surface-variant">Elena Vance</span>
+</div>
+<div class="flex items-center gap-4 text-xs font-mono text-on-surface-variant pt-2">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">schedule</span> 4h 32m</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">layers</span> 18 lessons</span>
+</div>
+</div>
+</div>
+<!-- Course Card 3 -->
+<div class="flex flex-col group cursor-pointer">
+<div class="relative aspect-[4/3] mb-5 overflow-hidden rounded-2xl bg-surface-container-high transition-all duration-500 group-hover:-translate-y-1 glow-primary-hover">
+<img alt="Sound Engineering" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Professional mixing console with faders and knobs in a world-class recording studio at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJTIEUZCD6s87nR_1mHOF2Iwaa7zst0-TsrcEpfowadDWXAHE3pb7L6hTkwFQrI7D_jgvgIVNhysKcik2IX0Ei3ixr-Zu2MOfssy7FYbCRtKy81_WxY2cdyg1Dyz6WUcEXSGPEgO9TzN9H3OFe9Gtb0v9DqxtGDDhIlVqUoMKgZOh9midO5ep4Q4IV648gfjjmo6zWeEljPVF1-okGP7SjHKDvMPCiYsKan9QA8utX1-woLKlJxoqLA16SjFG54g--GuMhbewZhTPt"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-surface-container-lowest/90 backdrop-blur text-on-surface text-[10px] font-bold font-mono px-2 py-1 rounded uppercase tracking-wider">Expert</span>
+</div>
+</div>
+<div class="flex flex-col space-y-3">
+<span class="text-[10px] font-bold font-mono text-[#8338EC] uppercase tracking-widest bg-[#8338EC]/10 self-start px-2 py-0.5 rounded">Engineering</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface leading-snug group-hover:text-primary transition-colors">Hybrid Mixing Workflows</h3>
+<div class="flex items-center gap-3">
+<img alt="Instructor Avatar" class="w-6 h-6 rounded-full object-cover" data-alt="Sound engineer adjusting knobs on equipment, focused expression, cinematic side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCellTNeP1C-Huq2SADy067ITfY8J3R_jJRpF0FchU3iXCDANFNs4VTjJwQkGqhC18k_utFaOE2nghXt1Da9O-sDmZEF0cHN-QLF1Nmn0OUlHjbnWy7hNwNQx4Z4UGUR5C-Zv13Q3MZ34MbP5tA92mwrEPvgbM2K8d1dFpjrj0QApMdUKaUkCRsXW8wKeNaODasqtrQGJEtn4chEWVTPTnLgG69svLCu9edcIxSxge5oAFO0Xk7JOZJ4YLUK6UM-5kTCVG1QvrE-Yir"/>
+<span class="text-sm font-medium text-on-surface-variant">David Koda</span>
+</div>
+<div class="flex items-center gap-4 text-xs font-mono text-on-surface-variant pt-2">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">schedule</span> 8h 45m</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">layers</span> 32 lessons</span>
+</div>
+</div>
+</div>
+<!-- Course Card 4: Live Status -->
+<div class="flex flex-col group cursor-pointer">
+<div class="relative aspect-[4/3] mb-5 overflow-hidden rounded-2xl bg-surface-container-high transition-all duration-500 group-hover:-translate-y-1 glow-primary-hover">
+<img alt="Guitar Course" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Electric guitar leaning against a vintage tube amplifier with atmospheric stage lighting and smoke" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxUGZC-tKtWj7i5yo7YrfI5UkILgwD_ZvJYmb_wmNJRfV62SOOOb0FeeQA6R2TmUbtJt3u4vRvrBb6X42YV7slOvVa9vKQ3PzxAQm9zhNBbd_r6QMFqnzOyHDZwyKlgR2_370MOMimPAgSyPYllwjp288SpXmGxtwcP_QPiX58TIaHAp9tuDKTgZppIjp9UJz79StzNknDEu31YpPZOa7jBQHZGz2ejTdU3Swp5Rq-mWil7gcwQJXSuwkV5vAXwnvm23j3_n0kCnty"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="flex items-center gap-1.5 bg-primary text-white text-[10px] font-bold font-mono px-2 py-1 rounded uppercase tracking-wider live-pulse">
+<span class="w-1.5 h-1.5 bg-white rounded-full"></span>
+                            Live
+                        </span>
+<span class="bg-surface-container-lowest/90 backdrop-blur text-on-surface text-[10px] font-bold font-mono px-2 py-1 rounded uppercase tracking-wider">Beginner</span>
+</div>
+</div>
+<div class="flex flex-col space-y-3">
+<span class="text-[10px] font-bold font-mono text-[#8338EC] uppercase tracking-widest bg-[#8338EC]/10 self-start px-2 py-0.5 rounded">Strings</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface leading-snug group-hover:text-primary transition-colors">Blues Licks and Phrasing</h3>
+<div class="flex items-center gap-3">
+<img alt="Instructor Avatar" class="w-6 h-6 rounded-full object-cover" data-alt="Middle-aged man playing guitar on a dark stage with a single spotlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzCFwd7BM8yFIuukBxwgh0PDWgpBOIveRcsbD07SbY4PdfEzIXDk3DSl4bbpG6TfV2nHKN_STzM_dqC1RRlSz1xeSudCfV6kR4ysOLTY6U35U7SKQrWsjzuVdwb87iDTDCKrzXdlfXLVLT_DFQWF40JAb-G2-YNnPv_DXkYw7_jgbYYW0436oQgwLQjePSECSNJA-2EpjqE1zuVQA73QMIGUKBGrNKnc9GcYgKfspkac58o_9zcbKq7iVHYmk0pkQnJAWCRjjS1Vqd"/>
+<span class="text-sm font-medium text-on-surface-variant">John Mayer (Guest)</span>
+</div>
+<div class="flex items-center gap-4 text-xs font-mono text-on-surface-variant pt-2">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">schedule</span> 3h 20m</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">layers</span> 12 lessons</span>
+</div>
+</div>
+</div>
+<!-- Additional Cards following the 4-column pattern -->
+<div class="flex flex-col group cursor-pointer">
+<div class="relative aspect-[4/3] mb-5 overflow-hidden rounded-2xl bg-surface-container-high transition-all duration-500 group-hover:-translate-y-1 glow-primary-hover">
+<img alt="Drum Masterclass" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Drums kit in a professional studio with golden hour sunlight streaming through windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDux1Gw_Od9cNYP2tQGnaU1xCySg4eHU0L8ymExYfCJet--wJj00dMTKeyrYOLa3jEtkBx-JSHXHgK8oqSwZ2Ka4WrglQH0RYWc_2ST11MY4B3yDxxEref-4lHlmPElSixkLGPNnaQX0RVB3zzUe9V4zWmE9T_hGOXkNS70EXNDJF1TT_4QlWpa9vIZitnC7I43qfgVN_OlgT8JMM1e9MmjkvCw9Tszhg5kLHYmXA-nfBb0VSCkQBQ8OnjlbwcA62GS9jSFdkq1te-s"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-surface-container-lowest/90 backdrop-blur text-on-surface text-[10px] font-bold font-mono px-2 py-1 rounded uppercase tracking-wider">All Levels</span>
+</div>
+</div>
+<div class="flex flex-col space-y-3">
+<span class="text-[10px] font-bold font-mono text-[#8338EC] uppercase tracking-widest bg-[#8338EC]/10 self-start px-2 py-0.5 rounded">Percussion</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface leading-snug group-hover:text-primary transition-colors">Rhythmic Pocket Mastery</h3>
+<div class="flex items-center gap-3">
+<img alt="Instructor Avatar" class="w-6 h-6 rounded-full object-cover" data-alt="Cool drummer sitting behind his kit in a garage-style studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkrED6LNCK6OCGh9ejkPtgYwtlI5sbYMv_MWKNV7oCsIT_0wbo4lOYg70yOGWZsqlcJTnIGsLZbiHq-RuKMmtiDkKEGw1skopAx94wgrdDBuEPMgqtgnyIEcbrwku8ytE41SsZefQ2NW4YRHTtnUxwTv5C1bu5ajAlqtrBOIYTevrCvKmMNhxuY3E00wacAlfXcWe0H7fKv3ZyF1b_cz06BSCy5O7RYRV0zHbQ3mkES4ico-3TqJ9rNkMDHP-Ojz1d9YcBfbCQhSX2"/>
+<span class="text-sm font-medium text-on-surface-variant">Chris Coleman</span>
+</div>
+<div class="flex items-center gap-4 text-xs font-mono text-on-surface-variant pt-2">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">schedule</span> 5h 10m</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">layers</span> 20 lessons</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col group cursor-pointer">
+<div class="relative aspect-[4/3] mb-5 overflow-hidden rounded-2xl bg-surface-container-high transition-all duration-500 group-hover:-translate-y-1 glow-primary-hover">
+<img alt="Vocal Performance" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Recording microphone with pop filter in a dark vocal booth with soft purple mood lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxyRnFRI6nTeiFaTyUShQo_bQbyyRm5ecxeBcDE449vbq6YDdx2gpQA8sLq7YprBCo9jj8H0QuGhtbQDHkUN1GnojJfsoOEZ8QqsDobPSUpCymKVfzxCfHtHyHmjfrE-pDJH0BbfHBL-UFm74nG5Uw3E-MGcbDTrZYxfHr9fwYma4eX-gBzU2wP6g0Rv8iKHDCw9VSiRVs5j8Y_t9006iYhr9MGuTp1CP2RAhnUEDD9TB-bDqu2v6UbDayrqy-fCNgJkdHNbmaOoM1"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-surface-container-lowest/90 backdrop-blur text-on-surface text-[10px] font-bold font-mono px-2 py-1 rounded uppercase tracking-wider">Beginner</span>
+</div>
+</div>
+<div class="flex flex-col space-y-3">
+<span class="text-[10px] font-bold font-mono text-[#8338EC] uppercase tracking-widest bg-[#8338EC]/10 self-start px-2 py-0.5 rounded">Vocals</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface leading-snug group-hover:text-primary transition-colors">Vocal Dynamics &amp; Control</h3>
+<div class="flex items-center gap-3">
+<img alt="Instructor Avatar" class="w-6 h-6 rounded-full object-cover" data-alt="Beautiful woman singing in front of a professional microphone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYFlLjJkyXtcFiY3nPzMlbeRJEYAaTnDSHQQ74Q0K8VZTocPIAc-4O4GTHG-U_Pwz344YVWYz67X-E5YPszttJZdyqT1n963sHmlT1-y36Kb3nwUDJPP_hs-8t3-Vpto9bq3oPp8uUFc93GeuQcD9MkM8qT0svFb53-_VI8Pj-jBvT-sN6Absnhd9gGId83hy7EsYnwGsivCfsWli_vbI2625vibubmist3jmawrzPXWTjEBchNrYKdAod8onzdi2uiNlcfL4w-0Tv"/>
+<span class="text-sm font-medium text-on-surface-variant">Sara Lyonne</span>
+</div>
+<div class="flex items-center gap-4 text-xs font-mono text-on-surface-variant pt-2">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">schedule</span> 7h 20m</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">layers</span> 28 lessons</span>
+</div>
+</div>
+</div>
+<!-- CTA Card / Bento Style Break -->
+<div class="col-span-1 sm:col-span-2 relative overflow-hidden rounded-2xl bg-[#E63946] p-8 flex flex-col justify-between group">
+<div class="z-10">
+<h4 class="text-white/80 font-mono text-xs font-bold uppercase tracking-widest mb-2">Exclusive Event</h4>
+<h3 class="font-headline text-4xl text-white font-bold leading-tight max-w-sm">Join the 24-Hour Studio Jam Session</h3>
+<p class="text-white/70 mt-4 text-lg max-w-xs">A live global collaboration event for Harmony members only.</p>
+</div>
+<div class="z-10 mt-8">
+<button class="bg-white text-[#E63946] px-8 py-3 rounded-xl font-bold hover:scale-105 transition-all">Secure your spot</button>
+</div>
+<span class="material-symbols-outlined absolute -bottom-10 -right-10 text-[200px] text-white/10 rotate-12 group-hover:rotate-0 transition-transform duration-700">graphic_eq</span>
+</div>
+</div>
+<!-- Pagination / Load More -->
+<div class="mt-24 flex flex-col items-center">
+<button class="px-12 py-4 bg-surface-container text-on-surface font-bold rounded-xl hover:bg-surface-container-high transition-all flex items-center gap-3">
+<span>Show 48 more masterclasses</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="w-full py-16 px-8 grid grid-cols-1 md:grid-cols-4 gap-12 bg-[#fff9ec] dark:bg-stone-950 border-t-0 bg-[#faf3e2] dark:bg-stone-900">
+<div class="col-span-1 md:col-span-1">
+<span class="text-3xl font-bold text-[#e63946] mb-4 block">Harmony</span>
+<p class="text-stone-500 dark:text-stone-500 text-sm max-w-xs leading-relaxed">
+                The Analog Master Experience. Redefining digital music education through high-fidelity editorial learning.
+            </p>
+</div>
+<div>
+<h4 class="font-headline text-lg font-bold mb-6 text-on-surface">Explore</h4>
+<ul class="space-y-3">
+<li><a class="text-stone-500 hover:text-[#2a9d8f] transition-colors" href="#">Lessons</a></li>
+<li><a class="text-stone-500 hover:text-[#2a9d8f] transition-colors" href="#">Masterclasses</a></li>
+<li><a class="text-stone-500 hover:text-[#2a9d8f] transition-colors" href="#">Instruments</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline text-lg font-bold mb-6 text-on-surface">Company</h4>
+<ul class="space-y-3">
+<li><a class="text-stone-500 hover:text-[#2a9d8f] transition-colors" href="#">Pricing</a></li>
+<li><a class="text-stone-500 hover:text-[#2a9d8f] transition-colors" href="#">Privacy</a></li>
+<li><a class="text-stone-500 hover:text-[#2a9d8f] transition-colors" href="#">Terms</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline text-lg font-bold mb-6 text-on-surface">Connect</h4>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-stone-500 cursor-pointer hover:text-primary">brand_awareness</span>
+<span class="material-symbols-outlined text-stone-500 cursor-pointer hover:text-primary">podcasts</span>
+<span class="material-symbols-outlined text-stone-500 cursor-pointer hover:text-primary">videocam</span>
+</div>
+<p class="mt-8 text-xs text-stone-500 font-mono">© 2024 Harmony LMS. The Analog Master Experience.</p>
+</div>
+</footer>
+</body></html>

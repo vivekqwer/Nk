@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Harmony LMS - Music Mastery Starts Here</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Work+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#fffbff",
+                        "tertiary": "#8b4c11",
+                        "on-secondary-fixed-variant": "#005048",
+                        "on-background": "#1e1c12",
+                        "on-primary-fixed": "#410007",
+                        "primary-fixed": "#ffdad8",
+                        "tertiary-fixed-dim": "#ffb780",
+                        "secondary": "#006a60",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#e4bebc",
+                        "surface-tint": "#bb152c",
+                        "tertiary-fixed": "#ffdcc4",
+                        "surface-dim": "#e0dac9",
+                        "primary-container": "#db313f",
+                        "primary-fixed-dim": "#ffb3b1",
+                        "on-tertiary-fixed-variant": "#6f3800",
+                        "surface-container-low": "#faf3e2",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#6fd8c8",
+                        "secondary-fixed": "#8cf5e4",
+                        "tertiary-container": "#a96428",
+                        "surface-container-highest": "#e9e2d2",
+                        "on-primary-container": "#fffbff",
+                        "on-secondary-fixed": "#00201c",
+                        "inverse-surface": "#333025",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#1e1c12",
+                        "on-primary-fixed-variant": "#92001c",
+                        "on-surface-variant": "#5b403f",
+                        "error": "#ba1a1a",
+                        "outline": "#8f6f6e",
+                        "inverse-on-surface": "#f7f0df",
+                        "primary": "#b7102a",
+                        "surface-container": "#f4eddd",
+                        "surface-bright": "#fff9ec",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#8cf5e4",
+                        "surface": "#fff9ec",
+                        "on-tertiary-fixed": "#2f1400",
+                        "surface-variant": "#e9e2d2",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#ffb3b1",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#eee8d7",
+                        "on-secondary-container": "#007166",
+                        "background": "#fff9ec"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Work Sans", "sans-serif"],
+                        "label": ["JetBrains Mono", "monospace"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .vinyl-gradient {
+            background: linear-gradient(135deg, #1A1A2E 0%, #8338EC 50%, #E63946 100%);
+        }
+        .glow-primary {
+            box-shadow: 0 0 20px rgba(230, 57, 70, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<main class="min-h-screen flex flex-col md:flex-row">
+<!-- Left Pane: Brand Canvas -->
+<section class="md:w-1/2 vinyl-gradient p-8 md:p-16 flex flex-col justify-center items-center relative overflow-hidden">
+<!-- Decorative Grain/Texture Overlay -->
+<div class="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/p6.png')]"></div>
+<div class="relative z-10 max-w-xl text-center md:text-left space-y-12">
+<!-- Brand Anchor -->
+<div class="flex items-center gap-3 justify-center md:justify-start">
+<span class="material-symbols-outlined text-4xl text-on-primary" style="font-variation-settings: 'FILL' 1;">album</span>
+<span class="font-headline italic text-3xl font-black text-white tracking-tighter">Harmony</span>
+</div>
+<!-- Headline Cluster -->
+<div class="space-y-6">
+<h1 class="font-headline text-5xl md:text-7xl font-light text-white leading-[1.1] italic">
+                        Your front-row seat to <span class="font-bold border-b-4 border-on-primary-container">music mastery</span> starts here.
+                    </h1>
+<p class="text-white/80 text-lg md:text-xl font-light max-w-md leading-relaxed">
+                        Join 50,000+ artists, producers, and theory nerds in the most visceral learning experience ever built for the analog soul.
+                    </p>
+</div>
+<!-- Floating Testimonial Card (Asymmetric Layout) -->
+<div class="md:translate-x-12 mt-12 bg-white/10 backdrop-blur-xl p-6 rounded-3xl border border-white/10 shadow-2xl max-w-sm">
+<div class="flex gap-4 items-start">
+<img alt="" class="w-14 h-14 rounded-full object-cover ring-2 ring-primary" data-alt="Close-up portrait of a professional female musician with curly hair wearing headphones in a studio with soft bokeh lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzBorc6HCEPMDDsB-2Y5GOQArqGP_MF85BuHiAVDZljZRw6DP9V7MFVbKISFj-BoBlxf1pVUzprx4HSIW_9IY_-6vOS6qdku2FpfqKwp54e5wIXgFlSfD3T_kg0gWZjc1lBOxE0amcH11-PbCx8N_yFiSWXJYs6Fx_Io83y_U_cHOH8DBnh7r59L8Ypm3aRCCy0SidtlHYJzgt1yCsqD3byGTIAAenv3oyz5ABF2-1GeTsIScgdogE5cWfr2wX0agCCEzCb7WvGama"/>
+<div class="space-y-2">
+<div class="flex text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-white text-sm font-medium italic">"The tactile feel of this platform changed how I visualize synthesis. It’s like playing a Moog for your brain."</p>
+<p class="text-white/60 font-label text-[10px] uppercase tracking-widest">— Sarah V., Sound Designer</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Background Aesthetic Image -->
+<div class="absolute -bottom-24 -right-24 w-96 h-96 opacity-20 rotate-12">
+<img alt="" class="w-full h-full object-cover rounded-full" data-alt="A vintage top-down view of a classic black vinyl record spinning on a turntable with warm golden highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGFUyRLAQytv0ZJA-T-xOUF2KXzccDzL80B5KyjU5takPrOgLFOlFwCMXxrP4g58bSg0bS3rWV9hFwxLpFifhV-R64FIZYlNJgXOHD_GHc9DE_vQxe7vQPe7zVeHPian-AVVxydpm-pEr6khm_QYUAgSsTuBkVNWgwpolseOMaIesXdTy-EO-qm-V0_jSU28sVkamZXrkwm8pYYrz-CLA_Pgj8ptW6j-YnKsF7oK-NPktPGHT65fzfl6y7P5z7LybVUMDFi0DJGCH4"/>
+</div>
+</section>
+<!-- Right Pane: Signup Form -->
+<section class="md:w-1/2 bg-[#FFF8E7] p-8 md:p-16 lg:p-24 flex flex-col justify-center">
+<div class="max-w-md mx-auto w-full space-y-10">
+<!-- Login Link -->
+<div class="flex justify-end">
+<p class="text-on-surface-variant text-sm font-medium">
+                        Already a member? 
+                        <a class="text-primary font-bold hover:underline decoration-2 underline-offset-4 transition-all" href="#">Log in</a>
+</p>
+</div>
+<!-- Form Header -->
+<div class="space-y-2">
+<h2 class="font-headline text-4xl font-bold tracking-tight text-on-surface">Create your account</h2>
+<p class="text-on-surface-variant font-light">Join the front row of music education.</p>
+</div>
+<!-- Social Auth -->
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-3 bg-surface-container-lowest border border-outline-variant/20 py-3 rounded-xl hover:bg-surface-container-low transition-all duration-300">
+<img alt="Google Logo" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChofdRaI0QcVSpVXLk5_Zy9qcwr-SYRuP3dzDSFmRYFnqOKeGXB9782tVGkL0yhGhXSUApNKs8nkiprBAUCP-TwKl09MfEKw-QAorRFh9ChL4xFyyRvkOgUv0FcfjmWhDAhddGYZmIj9YPwl8ZbtUX7OKZxlQmTEC67THONb4M_Sk82uaiOZj94Xc45zfvjamO-dJjnE2T8oQmbjKkLQAHoXiDZATvjnCgi4NtwMSHnHSC52gDrgdracV6oNwssnMFKUSPpMm5cNQO"/>
+<span class="font-label text-xs font-semibold uppercase tracking-wider">Google</span>
+</button>
+<button class="flex items-center justify-center gap-3 bg-surface-container-lowest border border-outline-variant/20 py-3 rounded-xl hover:bg-surface-container-low transition-all duration-300">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">ios</span>
+<span class="font-label text-xs font-semibold uppercase tracking-wider">Apple</span>
+</button>
+</div>
+<!-- Divider -->
+<div class="flex items-center gap-4">
+<div class="flex-1 h-[1px] bg-outline-variant/30"></div>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Or via email</span>
+<div class="flex-1 h-[1px] bg-outline-variant/30"></div>
+</div>
+<!-- Main Form -->
+<form class="space-y-6" onsubmit="event.preventDefault()">
+<div class="space-y-5">
+<div class="group">
+<label class="block font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 group-focus-within:text-primary transition-colors" for="name">Full name</label>
+<input class="w-full bg-surface-container-lowest border-0 ring-1 ring-outline-variant/20 rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary focus:outline-none transition-all placeholder:text-outline-variant/60 font-body" id="name" placeholder="Claude Debussy" type="text"/>
+</div>
+<div class="group">
+<label class="block font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 group-focus-within:text-primary transition-colors" for="email">Email</label>
+<input class="w-full bg-surface-container-lowest border-0 ring-1 ring-outline-variant/20 rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary focus:outline-none transition-all placeholder:text-outline-variant/60 font-body" id="email" placeholder="claudio@harmony.com" type="email"/>
+</div>
+<div class="group">
+<label class="block font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 group-focus-within:text-primary transition-colors" for="password">Password</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-0 ring-1 ring-outline-variant/20 rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary focus:outline-none transition-all placeholder:text-outline-variant/60 font-body" id="password" placeholder="••••••••" type="password"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline-variant cursor-pointer hover:text-primary">visibility</span>
+</div>
+<!-- Strength Meter -->
+<div class="mt-3 flex items-center gap-1.5">
+<div class="h-1.5 flex-1 bg-primary rounded-full"></div>
+<div class="h-1.5 flex-1 bg-primary rounded-full"></div>
+<div class="h-1.5 flex-1 bg-surface-container-highest rounded-full"></div>
+<div class="h-1.5 flex-1 bg-surface-container-highest rounded-full"></div>
+<span class="ml-2 font-label text-[10px] uppercase text-primary font-bold">Medium</span>
+</div>
+</div>
+</div>
+<!-- Terms -->
+<label class="flex items-start gap-3 cursor-pointer group">
+<input class="mt-1 rounded-sm border-outline-variant text-primary focus:ring-primary/20 bg-surface-container-lowest transition-all" type="checkbox"/>
+<span class="text-xs leading-relaxed text-on-surface-variant font-medium">
+                            I agree to the <a class="text-on-surface hover:text-primary underline underline-offset-2" href="#">Terms of Service</a> and <a class="text-on-surface hover:text-primary underline underline-offset-2" href="#">Privacy Policy</a>.
+                        </span>
+</label>
+<!-- CTA -->
+<button class="w-full bg-primary text-white py-5 rounded-2xl font-headline text-xl font-bold italic flex items-center justify-center gap-3 hover:bg-primary-container active:scale-95 transition-all shadow-xl shadow-primary/20 glow-primary">
+                        Create account
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</form>
+<!-- Disclaimer -->
+<p class="text-[10px] text-center text-outline leading-relaxed font-label uppercase tracking-tighter">
+                    By clicking Create Account, you acknowledge that you are over 13 and wish to receive rhythmic updates from the Harmony studio. No spam, only sound.
+                </p>
+</div>
+</section>
+</main>
+</body></html>

@@ -1,0 +1,88 @@
+.subscription-page {
+  min-height: 100vh;
+  background-color: var(--canvas-cream);
+}
+
+.pricing-header {
+  padding: 80px 0 48px;
+}
+
+.pricing-header h1 {
+  font-family: 'Newsreader', serif;
+  font-size: 56px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.pricing-header > .section-container > p {
+  font-size: 18px;
+  color: var(--ink-body);
+  margin-bottom: 32px;
+}
+
+.pricing-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.toggle-btn {
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.toggle-btn.active {
+  background: var(--ink-primary);
+  color: var(--canvas-cream);
+}
+
+.best-value {
+  background: var(--tertiary-gold);
+  color: var(--ink-primary);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.trust-row {
+  padding: 48px 0 80px;
+}
+
+.trust-items {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trust-item span {
+  font-size: 24px;
+}
+
+.trust-item p {
+  font-weight: 600;
+  color: var(--ink-body);
+}
+
+@media (max-width: 768px) {
+  .pricing-header h1 {
+    font-size: 40px;
+  }
+  
+  .trust-items {
+    flex-direction: column;
+    gap: 24px;
+  }
+}

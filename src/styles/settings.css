@@ -1,0 +1,369 @@
+.settings-page {
+  min-height: 100vh;
+  background-color: var(--canvas-cream);
+}
+
+/* Navigation */
+.navbar {
+  height: 72px;
+  background-color: var(--canvas-cream);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 80px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.logo {
+  font-family: 'Newsreader', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-crimson);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--ink-primary);
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.nav-links a.active {
+  color: var(--primary-crimson);
+}
+
+.nav-links a:hover {
+  color: var(--primary-crimson);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-icon,
+.notifications {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  background: var(--primary-crimson);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+}
+
+/* Settings Container */
+.settings-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 80px;
+}
+
+.settings-header {
+  margin-bottom: 48px;
+}
+
+.settings-header h1 {
+  font-family: 'Newsreader', serif;
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.settings-header p {
+  font-size: 18px;
+  color: var(--ink-muted);
+}
+
+/* Settings Layout */
+.settings-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+}
+
+/* Sidebar */
+.settings-sidebar {
+  position: sticky;
+  top: 80px;
+  height: fit-content;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-nav button {
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 500;
+  color: var(--ink-primary);
+  transition: all 0.2s;
+}
+
+.sidebar-nav button:hover {
+  background: var(--surface);
+}
+
+.sidebar-nav button.active {
+  background: var(--primary-crimson);
+  color: white;
+}
+
+/* Content */
+.settings-content {
+  min-height: 600px;
+}
+
+.settings-section h2 {
+  font-family: 'Newsreader', serif;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.form-section {
+  background: var(--surface);
+  padding: 32px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.form-section h3 {
+  font-family: 'Newsreader', serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink-body);
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  background: var(--surface);
+  font-size: 15px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-crimson);
+  box-shadow: 0 0 0 4px rgba(230, 57, 70, 0.18);
+}
+
+.primary-button {
+  background: var(--primary-crimson);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.primary-button:hover {
+  background: var(--primary-deep);
+}
+
+.ghost-button {
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ghost-button:hover {
+  background: var(--border);
+}
+
+.ghost-button.danger {
+  color: var(--error);
+  border-color: var(--error);
+}
+
+.ghost-button.danger:hover {
+  background: var(--error);
+  color: white;
+}
+
+/* Setting Item */
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-info h4 {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.setting-info p {
+  font-size: 14px;
+  color: var(--ink-muted);
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--border);
+  transition: 0.3s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--secondary-green);
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Plan Info */
+.plan-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: var(--secondary-soft);
+  border-radius: 12px;
+}
+
+.plan-details h4 {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.plan-details p {
+  font-size: 14px;
+  color: var(--ink-muted);
+}
+
+.payment-method {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .settings-layout {
+    grid-template-columns: 240px 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 24px;
+  }
+
+  .settings-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-sidebar {
+    position: static;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .settings-header h1 {
+    font-size: 32px;
+  }
+}

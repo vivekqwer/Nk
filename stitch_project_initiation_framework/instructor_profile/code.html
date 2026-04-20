@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Artist Profile | Harmony LMS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Work+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#faf3e2",
+                    "primary-container": "#db313f",
+                    "on-tertiary-container": "#fffbff",
+                    "on-background": "#1e1c12",
+                    "secondary-fixed-dim": "#6fd8c8",
+                    "surface-variant": "#e9e2d2",
+                    "primary-fixed-dim": "#ffb3b1",
+                    "surface-bright": "#fff9ec",
+                    "on-secondary-fixed": "#00201c",
+                    "surface-container-high": "#eee8d7",
+                    "secondary-fixed": "#8cf5e4",
+                    "on-tertiary-fixed": "#2f1400",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#5b403f",
+                    "secondary": "#006a60",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#8b4c11",
+                    "error": "#ba1a1a",
+                    "on-surface": "#1e1c12",
+                    "inverse-primary": "#ffb3b1",
+                    "tertiary-fixed": "#ffdcc4",
+                    "surface-dim": "#e0dac9",
+                    "primary": "#b7102a",
+                    "secondary-container": "#8cf5e4",
+                    "outline-variant": "#e4bebc",
+                    "on-primary-fixed-variant": "#92001c",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#ffb780",
+                    "inverse-surface": "#333025",
+                    "background": "#fff9ec",
+                    "tertiary-container": "#a96428",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#bb152c",
+                    "surface-container": "#f4eddd",
+                    "on-secondary": "#ffffff",
+                    "surface": "#fff9ec",
+                    "on-primary-container": "#fffbff",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e9e2d2",
+                    "on-secondary-container": "#007166",
+                    "primary-fixed": "#ffdad8",
+                    "outline": "#8f6f6e",
+                    "on-primary-fixed": "#410007",
+                    "on-tertiary-fixed-variant": "#6f3800",
+                    "inverse-on-surface": "#f7f0df",
+                    "on-secondary-fixed-variant": "#005048"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Work Sans"],
+                    "label": ["JetBrains Mono"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift-surface-container-low {
+            background-color: #faf3e2;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<nav class="bg-[#fff9ec]/80 dark:bg-stone-950/80 backdrop-blur-xl fixed top-0 w-full z-50 shadow-md shadow-stone-900/5">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="font-['Newsreader'] italic font-black text-2xl text-[#E63946]">Harmony LMS</div>
+<div class="hidden md:flex items-center gap-8 font-['Newsreader'] text-lg tracking-tight">
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#E63946] transition-colors" href="#">Courses</a>
+<a class="text-[#E63946] border-b-2 border-[#E63946] pb-1" href="#">Instructors</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#E63946] transition-colors" href="#">Live</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#E63946] transition-colors" href="#">Discography</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-4">
+<button class="material-symbols-outlined text-stone-600 hover:bg-stone-100/50 p-2 rounded-full transition-all">shopping_cart</button>
+<button class="material-symbols-outlined text-stone-600 hover:bg-stone-100/50 p-2 rounded-full transition-all">account_circle</button>
+</div>
+<button class="bg-[#b7102a] text-white px-6 py-2.5 rounded-xl font-medium hover:scale-95 duration-200 ease-in-out">Sign In</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Section 1: Hero (Cinematic) -->
+<section class="relative h-[400px] w-full flex items-end justify-center overflow-hidden">
+<img alt="Artist Hero Image" class="absolute inset-0 w-full h-full object-cover" data-alt="professional musician in a dimly lit recording studio surrounded by vintage analog gear and moody red lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeV6c-mpSe1GYa-3fHBRjvh6GIcwkK3ORIt8vYP-7DqKQ2bfHkh6fS64cW1xHnW5hZQVvgjOv_o0BaTG3_yW62DDPd3B3PWQUH63iNK7IRsPvghuHBOvHQy607Lg3_8u4ZeSmemwrZbv4HajuCTrz9Vxqnc2FuOWzIQ5LJkZKNGPZJJ78IiIJ0K4m7s7AcvTRo4SfjvOfM9f7h5iY1ATWownRh2gYqhbwFECVLXfoD12dn-Hea9g1GP40DOtUDLqVuLx5VAo9x5d3Z"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#1A1A2E] via-transparent to-transparent"></div>
+<div class="relative z-10 flex flex-col items-center mb-12 text-white">
+<div class="relative mb-6">
+<img alt="Artist Avatar" class="w-[160px] h-[160px] rounded-full border-4 border-[#F4A261] object-cover shadow-2xl" data-alt="close-up portrait of a charismatic music instructor with headphones around neck in a professional setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDtG_a9nnaBzVGKHyl21_6XJbLHRerbIwdoHTtLP_S_lA_3RoWvjnNRLYMe_h5R7WMnmqyC5-Tbjvbmbn2uudhz2xiDVAmsz_cNOA-K1qKvA7gcGVrbd2n8mGYBUVNEN8SvzlMW9RleQ0sL_gWAJULHSP6Gx_ggLBkoQXxj-0rhMQ_5dR19JT4wwbZUW_Jn2RZQLS2L_rOB_8D_vp2HKrLZ9oEOiHil7xrz8oVrxwgd2HlsS2toUAqke7YYGsUo6WGJ8MqjPu48nu2"/>
+<div class="absolute bottom-2 right-2 bg-[#2A9D8F] text-white p-1 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<h1 class="font-headline font-bold text-6xl md:text-7xl tracking-tighter mb-2">Julian Vane</h1>
+<div class="flex items-center gap-6 mb-8">
+<span class="font-label text-sm uppercase tracking-widest opacity-80">142K Followers</span>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-[#F4A261]">share</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-[#F4A261]">podcasts</span>
+</div>
+</div>
+<button class="bg-[#E63946] hover:bg-[#b7102a] text-white px-10 py-3 rounded-xl font-bold tracking-wide transition-all transform hover:scale-105 active:scale-95 shadow-lg">Follow</button>
+</div>
+</section>
+<div class="max-w-[1280px] mx-auto px-8 py-24 space-y-32">
+<!-- Section 2: About -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<div class="lg:col-span-7">
+<h2 class="font-headline text-4xl font-bold mb-8 italic text-primary">The Master's Journey</h2>
+<div class="space-y-6 text-lg leading-relaxed text-on-surface-variant">
+<p>Julian Vane is an award-winning composer and multi-instrumentalist who has spent two decades at the intersection of classical precision and modern electronic experimentation. His work has been featured in major motion pictures and performed by some of the world's leading orchestras.</p>
+<p>As a lead instructor at Harmony LMS, Julian focuses on the "Analog Soul" of music production—teaching students how to breathe life into digital workstations using organic textures and rhythmic complexity. His credentials include a Doctorate in Composition from the Juilliard School and three "Producer of the Year" accolades.</p>
+</div>
+</div>
+<div class="lg:col-span-5">
+<div class="bg-surface-container-low rounded-2xl p-8 shadow-md">
+<h3 class="font-headline text-2xl font-bold mb-6">Quick Facts</h3>
+<dl class="space-y-4">
+<div class="flex justify-between items-center border-b border-outline-variant/20 pb-4">
+<dt class="font-label text-xs uppercase text-on-surface-variant opacity-60">Hometown</dt>
+<dd class="font-medium">London, UK</dd>
+</div>
+<div class="flex justify-between items-center border-b border-outline-variant/20 pb-4">
+<dt class="font-label text-xs uppercase text-on-surface-variant opacity-60">Years Teaching</dt>
+<dd class="font-medium">12 Years</dd>
+</div>
+<div class="flex justify-between items-center border-b border-outline-variant/20 pb-4">
+<dt class="font-label text-xs uppercase text-on-surface-variant opacity-60">Genres</dt>
+<dd class="font-medium">Ambient, Neo-Classical, IDM</dd>
+</div>
+<div class="flex justify-between items-center">
+<dt class="font-label text-xs uppercase text-on-surface-variant opacity-60">Languages</dt>
+<dd class="font-medium">English, French</dd>
+</div>
+</dl>
+</div>
+</div>
+</section>
+<!-- Section 3: Courses -->
+<section>
+<div class="flex justify-between items-end mb-12">
+<h2 class="font-headline text-4xl font-bold italic">Curated Courses</h2>
+<a class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all" href="#">View All <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Course Card 1 -->
+<div class="bg-surface rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-all">
+<div class="h-48 overflow-hidden">
+<img alt="Course 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="close up of a vintage modular synthesizer with colorful patch cables and glowing led lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4d3JFpfuc6WsoVV3v6jFKUzF7U3X2SuMVcZIOCexNkLNiby5MiAlp0Q3UfB7-lTifKEwbRnljedY6fEv81PQNJra0wTGIxs9yAnIyx9n0qzdoln4UBzFdZ98uL6S8Dp79MvVsr4lhQmM-20J2U4ND1KHCeuU-0u0MKT4ywGYd6QgjNlmNylHI9FjRE7_mLQnwyeEaOsmq450ywv1hxpIuRl4cWJLdfoz_jr6Cxvnh_Ynf5Pykowd7yoaYiHa6wIksCdL2_kVFfo5E"/>
+</div>
+<div class="p-6">
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold">Advanced Theory</span>
+<h4 class="font-headline text-xl font-bold mt-2 leading-tight">Analog Synthesis Masterclass</h4>
+<div class="mt-4 flex items-center justify-between">
+<span class="text-sm font-medium">$199</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-[#F4A261]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">4.9</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="bg-surface rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-all">
+<div class="h-48 overflow-hidden">
+<img alt="Course 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="detail of grand piano hammers hitting strings in a focused cinematic shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB02Ly9sFoSwYjnfR6DfH5QuMp7xOqBH0BGlsoKl4VUXHUgC_nprud3E_b6PXt9orAEHCYkmU1mn4jEYboZyuMbg3RbIHheuC_f8u-yF9Ptoe2ODEjheuCBCFQtjdVJLZcORFT-UHrOjV306l2TiiwzxM24disoZPiMAJ-gjqxHpon3zS1jtuYr5mpTldMb0aXJp39UAQNTB7IG5K70GYB04m7cDR8ZgkfPBzjfaREiShqNL0oGaUCU1gC9mhQRQ5d4I2IjEqpl-sXu"/>
+</div>
+<div class="p-6">
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold">Composition</span>
+<h4 class="font-headline text-xl font-bold mt-2 leading-tight">Modern Scoring for Film</h4>
+<div class="mt-4 flex items-center justify-between">
+<span class="text-sm font-medium">$249</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-[#F4A261]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">5.0</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Course Card 3 -->
+<div class="bg-surface rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-all">
+<div class="h-48 overflow-hidden">
+<img alt="Course 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="studio mixing desk with faders and knobs under vibrant purple and blue ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD10y5ESZKXh3WKzaAuEJwK-wQU9fthFAt3x0EsUd-7ecMSaeYbYK7HlccPXyz7W2g6RGNxnbD3jsBN1x2ARnkUfw2NnktEh8CqUomLXfNsZaPvDmIkXp7ZuaQsYYBvp4--ehAC82KLep2cVEVYiX632FEDnLVM5peBvSc4qF9B5qDHuLnEXztCkAG89comlSh1Y2lay8PYrMXI6Krkp5Jg8cOT13YqBWTYqeMuH85C44SIPp4KIuSEo68OeOSsCQbEa1KWmi5iSS85"/>
+</div>
+<div class="p-6">
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold">Production</span>
+<h4 class="font-headline text-xl font-bold mt-2 leading-tight">The Art of Sound Design</h4>
+<div class="mt-4 flex items-center justify-between">
+<span class="text-sm font-medium">$179</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-[#F4A261]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">4.8</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Course Card 4 -->
+<div class="bg-surface rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-all">
+<div class="h-48 overflow-hidden">
+<img alt="Course 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="vibrant image of music production equipment including speakers and keyboard in a modern home studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAataMWKM7ga5Jk_QknhNtK-X2hpVUWqPtOc0_vHuj1tSUEagetPeuAMAEhsRdys_YRfbuLgVEEtbeVd9lESc1piziLEre8fgjjjtgFfF6eJ8SoeY0gxMqPDUi3jR0hdf2zMFayCJ1A36QZoZAxqq18Q_gN-Z_j7x_AMTQ39nmHIs7k3Y7gBqauUJxEvURmw_JZuS9hGdp0rf9HgEXjAMh-a8k9SigYxHJuWetD3Jwwfan5mewfZA97qq8TEi9hO9QrRUu7AYpZXoba"/>
+</div>
+<div class="p-6">
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold">Business</span>
+<h4 class="font-headline text-xl font-bold mt-2 leading-tight">Monetizing Your Music</h4>
+<div class="mt-4 flex items-center justify-between">
+<span class="text-sm font-medium">$129</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-[#F4A261]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">4.7</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Upcoming Live Sessions -->
+<section class="bg-[#1e1c12] text-white p-12 rounded-[2rem] overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<img alt="Live Background" class="w-full h-full object-cover" data-alt="blurred silhouette of a crowd at a concert with bright stage lights in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeErOVy1VuHssOdb1z2daizDjO80owvExuvSbgCAEPgK67_f47cWt9KfUd-ufTvpgPyNfaO72YaK8oFac2m3CyFLJiBAN7H_S5Z-n8TsbuIknuNfAYLBpLbx0Nhc7l5f3bPulO1YkaguhI8DkmqQg_Jx1rc7RNIuDGAiMci5x4KfS_TbO4jP3UclNb1N2NX81MAPcRhd-r1os8hsRiAJVODd9JwjLbXGlYVEizAAtRT4bCDGkk8FfV6D4l8sKFfzerl0zdccrTAOij"/>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-4 mb-10">
+<span class="w-3 h-3 rounded-full bg-primary animate-pulse"></span>
+<h2 class="font-headline text-4xl font-bold">Live Studio Sessions</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1">
+<span class="font-label text-xs text-[#F4A261] mb-2 block uppercase tracking-widest">October 24 • 7:00 PM EST</span>
+<h3 class="font-headline text-2xl font-bold mb-4">The Secret of Rhythmic Tension</h3>
+<p class="text-white/60 mb-6">Interactive session on complex polyrhythms and time signatures.</p>
+<button class="bg-[#2A9D8F] hover:bg-secondary text-white px-8 py-3 rounded-xl font-bold transition-all">Reserve Spot</button>
+</div>
+</div>
+<div class="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1">
+<span class="font-label text-xs text-[#F4A261] mb-2 block uppercase tracking-widest">November 12 • 4:00 PM EST</span>
+<h3 class="font-headline text-2xl font-bold mb-4">Q&amp;A: Building Your Portfolio</h3>
+<p class="text-white/60 mb-6">Open floor for students to get direct feedback on their compositions.</p>
+<button class="bg-[#2A9D8F] hover:bg-secondary text-white px-8 py-3 rounded-xl font-bold transition-all">Reserve Spot</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Discography Strip -->
+<section>
+<h2 class="font-headline text-4xl font-bold italic mb-12">Selected Works</h2>
+<div class="flex overflow-x-auto pb-12 gap-10 no-scrollbar snap-x">
+<!-- Album 1 -->
+<div class="flex-none w-64 snap-start">
+<div class="aspect-square bg-stone-200 rounded-xl overflow-hidden shadow-lg mb-4">
+<img alt="Album 1" class="w-full h-full object-cover" data-alt="minimalist album cover design with abstract geometric shapes and grainy texture in warm earth tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsHK4d7_fkJOxM8KJVc57MCz0KRBiQpiZ3sbpJiJhqm2y1liLox6WWM-OQre9hflazri75cpZaOCSdQwQWO4nk54rsSkNY4QD4muDCuHChetypb9fJrXL9GSQGW8aRtnNRvwMtmPK0Y7dKY7jLj9m1OK3QXiOxCaDWbLE-OQZc3h7vBJl4sJJQqkfD_DidjmpYQMJzmRoIfQcoR_miAdGk-h7wgKErgCuFdwuXUZhM9zBr0QIXkjhjB4_DeRIqks4YkXhIC3wRLl4w"/>
+</div>
+<h5 class="font-headline text-xl font-bold">Stasis Echoes</h5>
+<p class="font-label text-xs text-on-surface-variant/60 uppercase mt-1">2023 • LP</p>
+</div>
+<!-- Album 2 -->
+<div class="flex-none w-64 snap-start">
+<div class="aspect-square bg-stone-200 rounded-xl overflow-hidden shadow-lg mb-4">
+<img alt="Album 2" class="w-full h-full object-cover" data-alt="modernist art album cover with flowing liquid patterns and vibrant neon violet and deep blue colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt-mz4zsmWWZU7S61OUkOUE4UlTSWuCUD4WhvL8CERqYXrDta54u8bLfMNm09SsXt5UEHtbPZiNolZO3LbMCaqMXVr-uLnL5XuM2c5MmYk-0zcL308r0V2crDsWU_U63AgZBY8FEzCwBiabwXHS1q9w9p5-RcDqHmVokfsMxpGJGF0Nc14bPYe6Nqcfjuehhmzd43g-b27oKKALpy8iKJH5ZAz-nfpJHgN9n5_liP9EX9hU-aYQkMWNRn6M8R24Cmt2PlH9mcqOlv2"/>
+</div>
+<h5 class="font-headline text-xl font-bold">Kinetics</h5>
+<p class="font-label text-xs text-on-surface-variant/60 uppercase mt-1">2021 • EP</p>
+</div>
+<!-- Album 3 -->
+<div class="flex-none w-64 snap-start">
+<div class="aspect-square bg-stone-200 rounded-xl overflow-hidden shadow-lg mb-4">
+<img alt="Album 3" class="w-full h-full object-cover" data-alt="monochrome photography album cover featuring a solitary silhouette in a misty urban environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw7tQOYpbvZm9S0gqqqlCw28j-LfclkirTWI-UUneKxXDaOeDLBubp4ufSEH_hmQCG3-yAwFX8K9uzXhYKJKz-FJoiwx2Tz7y7whRYFzawgTQHJLDnRVdpCATeDl-Pyovs19AW1SwJxWJOc0ljp3Wp335vriezj9Lf0vsUHFUF_6dngNQdWrXj7Ls1uuT2DA-Zzx4xXXccKQlfH1FUiEe2K8lYA5-1yxEm8dToPTx73T5gcIDVXRHuxnAM7XF-UuzDjrPBIZhztRuJ"/>
+</div>
+<h5 class="font-headline text-xl font-bold">London Fog</h5>
+<p class="font-label text-xs text-on-surface-variant/60 uppercase mt-1">2019 • LP</p>
+</div>
+<!-- Album 4 -->
+<div class="flex-none w-64 snap-start">
+<div class="aspect-square bg-stone-200 rounded-xl overflow-hidden shadow-lg mb-4">
+<img alt="Album 4" class="w-full h-full object-cover" data-alt="classic vinyl record aesthetics album cover with bold typography and a vintage sepia filter over a musician portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoVWJSfgGM8R3Q1oAeHlgLtzQqbJYIR48_UNNweIpogB7DmQYw9tA87sSByuUCLgZ0B89e2gYFR6MhaZp85VOk_xWDyRtLeuHE6gFghUArracxuMsh3sACzAIt3QJC-X2HYzBTlMtrh0ShLXNaFxzHRZTeIeAmR2aPMaoBlzJNLkzNWk3KBdlhP5HcddciUQnwFzkHuOmmiCgTMMrzi82FNM-jtTvoRR5WQdTx5ZHA0qTXFnpEUPaH9p74dPqiKweCYFNgeRQ_bc0h"/>
+</div>
+<h5 class="font-headline text-xl font-bold">The Cellist</h5>
+<p class="font-label text-xs text-on-surface-variant/60 uppercase mt-1">2017 • Single</p>
+</div>
+<!-- Album 5 -->
+<div class="flex-none w-64 snap-start">
+<div class="aspect-square bg-stone-200 rounded-xl overflow-hidden shadow-lg mb-4">
+<img alt="Album 5" class="w-full h-full object-cover" data-alt="experimental electronic album cover with glitch art effects and high contrast black and red imagery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO1F_M9GzB9UOwbHij2tvZKiWe0RsTjrlDZNQLFW-xPpGRy1Xv-7HdqIqZ9a8o7OaDpokLhWW3yK5qF4pQiYiW3SQhGu0AjMgR_7ScAw-njVp2zeCCkXVaJSLwkyQZokzrgyJ8KKzFvpeAmbdhuCwAmOsMLBtwGay1pbHTypLmlofz7VVSeiDwK-ylsWqhCfy2yv67VoN5HRKxh-kvoZ-GGeCiDEd4Z1vWIQLl4lpiE6LuuQgrfllPlMYcPmaz352DViifbWs_qA8y"/>
+</div>
+<h5 class="font-headline text-xl font-bold">Resonance</h5>
+<p class="font-label text-xs text-on-surface-variant/60 uppercase mt-1">2015 • LP</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 w-full border-t-0 tonal-shift bg-[#faf3e2] dark:bg-stone-900">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 max-w-7xl mx-auto">
+<div class="font-['Newsreader'] font-bold text-[#E63946] text-xl">Harmony LMS.</div>
+<div class="flex flex-wrap justify-center gap-8 font-['Work_Sans'] text-sm tracking-wide">
+<a class="text-stone-500 hover:text-[#2A9D8F] transition-colors" href="#">Studio Terms</a>
+<a class="text-stone-500 hover:text-[#2A9D8F] transition-colors" href="#">Privacy Policy</a>
+<a class="text-stone-500 hover:text-[#2A9D8F] transition-colors" href="#">Contact Support</a>
+<a class="text-stone-500 hover:text-[#2A9D8F] transition-colors" href="#">Artist Handbook</a>
+</div>
+<div class="text-stone-500 font-['Work_Sans'] text-sm opacity-80 hover:opacity-100 transition-opacity">
+                © 2024 Harmony LMS. The Analog Master Experience.
+            </div>
+</div>
+</footer>
+</body></html>

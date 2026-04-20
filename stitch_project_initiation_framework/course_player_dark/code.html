@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Harmony LMS Course Player</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Work+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#1A1A2E",
+                    "on-tertiary-container": "#fffbff",
+                    "primary-fixed": "#ffdad8",
+                    "inverse-on-surface": "#f7f0df",
+                    "on-primary-fixed-variant": "#92001c",
+                    "outline-variant": "rgba(228, 190, 188, 0.15)",
+                    "secondary-container": "#8cf5e4",
+                    "on-primary-container": "#fffbff",
+                    "on-secondary-fixed-variant": "#005048",
+                    "surface-variant": "#e9e2d2",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#23233a",
+                    "on-secondary-container": "#007166",
+                    "primary": "#e63946",
+                    "secondary-fixed-dim": "#6fd8c8",
+                    "primary-container": "#db313f",
+                    "on-surface": "#fff9ec",
+                    "surface-container-highest": "#2d2d44",
+                    "on-primary": "#ffffff",
+                    "on-background": "#fff9ec",
+                    "tertiary-fixed": "#ffdcc4",
+                    "on-secondary-fixed": "#00201c",
+                    "surface-dim": "#0F0E17",
+                    "surface-container-low": "#161625",
+                    "secondary-fixed": "#8cf5e4",
+                    "secondary": "#2A9D8F",
+                    "surface-container": "#1e1e32",
+                    "surface-container-lowest": "#0F0E17",
+                    "tertiary-fixed-dim": "#ffb780",
+                    "inverse-surface": "#fff9ec",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed-variant": "#6f3800",
+                    "surface-bright": "#1A1A2E",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed": "#410007",
+                    "background": "#0F0E17",
+                    "surface-tint": "#bb152c",
+                    "on-surface-variant": "#e4bebc",
+                    "tertiary-container": "#a96428",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#8b4c11",
+                    "inverse-primary": "#ffb3b1",
+                    "outline": "#8f6f6e",
+                    "primary-fixed-dim": "#ffb3b1",
+                    "on-tertiary-fixed": "#2f1400",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1rem",
+                    "3xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Work Sans", "sans-serif"],
+                    "label": ["JetBrains Mono", "monospace"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Work Sans', sans-serif; }
+        h1, h2, h3, .serif { font-family: 'Newsreader', serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-primary { box-shadow: 0 0 0 4px rgba(230, 57, 70, 0.18); }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #2d2d44; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary selection:text-white">
+<!-- TopNavBar (Shared Component Execution) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-8 h-20 bg-stone-950 backdrop-blur-xl bg-opacity-80 shadow-none">
+<div class="flex items-center gap-8">
+<div class="text-2xl font-bold font-serif text-[#e63946] tracking-tight">Harmony</div>
+<div class="hidden md:flex gap-6 items-center">
+<nav class="flex gap-6">
+<a class="text-stone-400 font-medium hover:text-[#e63946] transition-colors duration-300" href="#">Lessons</a>
+<a class="text-[#e63946] font-bold border-b-2 border-[#e63946] pb-1" href="#">Course Player</a>
+<a class="text-stone-400 font-medium hover:text-[#e63946] transition-colors duration-300" href="#">My Library</a>
+</nav>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">music_note</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">notifications</span>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant">
+<img alt="User profile avatar" data-alt="User profile avatar close-up of a smiling professional musician in a high-end recording studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6QyHcHRuaWI_1tgiTgSrBYm7zCftEzUY_X8ESFaaoJ27UyUFC4MC4DJnNnj1Lw5Aj2KwUfsPnOnT1ML9TlJQBgcZTdDfe_jihQGqzrxGbxeHzyuGD0XB7PohRraRd9E6EZAhTwF7fkRfDLogBWchwkvLd9zGXdPcv1jTqYp3b2zAN0MbIcWnegxs7W2CoaA6IcoiubsoamOSK9Oaoru_8jQH4TcZ5uEnReL-uWrIp_5uhjUaWVfbEKPt7Kz8CFR57I-YQC2MtEU6F"/>
+</div>
+</div>
+</header>
+<main class="pt-20 min-h-screen flex flex-col lg:flex-row">
+<!-- Video Content Canvas -->
+<section class="flex-grow p-6 lg:p-8 space-y-8 overflow-y-auto">
+<!-- Player Wrapper -->
+<div class="relative group aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl">
+<img alt="Course Video Content" class="w-full h-full object-cover opacity-80" data-alt="Cinematic wide shot of a professional cellist performing in a moody darkened studio with dramatic spotlighting and dust motes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp6LPxspRS9sJ8uJ5yXKztheMpyv8QSXVZqPd0szjfoYqTlNp47z9HRTjPPNCSWXbwhgv30mk5psM1-vrnasOQ5mdIbMlYPQ6A72yqV8r8Mq57UDtc-IFznO5zD44VIfjXwyK2D-BHBT-_mAVaYLygP2yWt0-nVYe15LQsdggXdf-XfkA_4yjRMH5dK2QVyHlAA9rizJ1rssEN7k0RzxsqaZwB4qoR7mbuo_eAUQDKiYEXl2JGlig90lK2qj9o_ctzKS9_P5hKjYcC"/>
+<!-- Custom Controls Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6 transition-opacity duration-300">
+<!-- Progress Bar -->
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full mb-6 relative group cursor-pointer">
+<div class="absolute left-0 top-0 h-full w-2/3 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+<div class="absolute left-2/3 top-1/2 -translate-y-1/2 w-4 h-4 bg-white rounded-full scale-0 group-hover:scale-100 transition-transform glow-primary"></div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-white text-3xl cursor-pointer hover:text-primary transition-all">play_arrow</span>
+<span class="material-symbols-outlined text-white text-2xl cursor-pointer hover:text-primary transition-all">skip_next</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-white text-xl">volume_up</span>
+<div class="w-20 h-1 bg-white/20 rounded-full">
+<div class="w-3/4 h-full bg-white rounded-full"></div>
+</div>
+</div>
+<span class="mono text-xs text-on-surface-variant bg-black/40 px-2 py-1 rounded">12:45 / 18:32</span>
+</div>
+<!-- Special Tools: A-B Loop -->
+<div class="flex items-center gap-4">
+<div class="flex items-center bg-black/40 rounded-xl p-1 gap-1 border border-white/10">
+<button class="px-3 py-1 text-[10px] mono text-primary font-bold bg-white/10 rounded-lg">SET A</button>
+<button class="px-3 py-1 text-[10px] mono text-white/50 hover:text-white transition-colors">SET B</button>
+<span class="material-symbols-outlined text-sm text-white/50 px-2">all_inclusive</span>
+</div>
+<span class="material-symbols-outlined text-white cursor-pointer hover:text-primary">settings</span>
+<span class="material-symbols-outlined text-white cursor-pointer hover:text-primary">fullscreen</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Title & Metadata -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="text-4xl lg:text-5xl font-bold leading-tight tracking-tight">Mastering the Cello: Advanced Vibrato Techniques</h1>
+<p class="mt-4 text-on-surface-variant font-medium flex items-center gap-3">
+<span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs mono tracking-widest">MODULE 04</span>
+<span class="text-secondary font-bold">In-Progress</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span class="mono text-xs">Instructor: Yo-Yo Ma (Masterclass)</span>
+</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface px-6 py-3 rounded-2xl font-semibold transition-all flex items-center gap-2">
+<span class="material-symbols-outlined">bookmark</span>
+                        Save Lesson
+                    </button>
+<button class="bg-primary text-white px-8 py-3 rounded-2xl font-bold hover:translate-y-[-2px] transition-all shadow-lg shadow-primary/20">
+                        Mark as Complete
+                    </button>
+</div>
+</div>
+<!-- Tabs Section -->
+<div class="mt-12">
+<div class="flex border-b border-outline-variant gap-8 overflow-x-auto custom-scrollbar">
+<button class="pb-4 border-b-2 border-primary text-primary font-bold text-lg">Notes</button>
+<button class="pb-4 border-b-2 border-transparent text-on-surface-variant hover:text-on-surface font-medium text-lg">Transcript</button>
+<button class="pb-4 border-b-2 border-transparent text-on-surface-variant hover:text-on-surface font-medium text-lg">Resources</button>
+<button class="pb-4 border-b-2 border-transparent text-on-surface-variant hover:text-on-surface font-medium text-lg">Discussion</button>
+</div>
+<div class="py-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="p-8 bg-surface rounded-3xl space-y-4">
+<h3 class="text-2xl font-bold text-primary italic">Personal Session Notes</h3>
+<p class="text-on-surface-variant leading-relaxed italic">"Focus on the oscillation depth in the lower register. Keep the hand tension low..."</p>
+<div class="flex gap-2">
+<span class="bg-surface-container-high px-3 py-1 rounded-lg mono text-[10px] text-secondary">04:22</span>
+<span class="bg-surface-container-high px-3 py-1 rounded-lg mono text-[10px] text-secondary">08:15</span>
+</div>
+<div class="pt-4 border-t border-outline-variant flex justify-between items-center">
+<span class="text-xs text-on-surface-variant mono">Last edited 2h ago</span>
+<span class="material-symbols-outlined text-primary cursor-pointer">edit_note</span>
+</div>
+</div>
+<div class="p-8 bg-surface-container-low border border-outline-variant rounded-3xl flex flex-col justify-center items-center text-center space-y-4">
+<div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">add</span>
+</div>
+<p class="font-bold text-on-surface">Add New Timestamp Note</p>
+<p class="text-xs text-on-surface-variant mono">Capture a specific moment to review later.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Sidebar (Curriculum Panel) -->
+<aside class="w-full lg:w-96 bg-surface border-l border-outline-variant flex flex-col h-[calc(100vh-5rem)] sticky top-20">
+<div class="p-6 border-b border-outline-variant flex justify-between items-center bg-surface-container-low">
+<h2 class="text-xl font-bold">Course Curriculum</h2>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer">menu_open</span>
+</div>
+<div class="flex-grow overflow-y-auto custom-scrollbar">
+<!-- Module 1 -->
+<div class="p-4">
+<div class="flex items-center justify-between mb-4 px-2">
+<span class="mono text-[10px] tracking-tighter text-on-surface-variant">MODULE 03: BOW CONTROL</span>
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="space-y-2 opacity-50">
+<div class="p-4 bg-surface-container rounded-2xl flex items-center gap-4">
+<span class="mono text-xs text-on-surface-variant">01</span>
+<span class="text-sm font-medium">Posture &amp; Grip Basics</span>
+</div>
+</div>
+</div>
+<!-- Module 2 (Active) -->
+<div class="p-4 bg-surface-container-low">
+<div class="flex items-center justify-between mb-4 px-2">
+<span class="mono text-[10px] tracking-tighter text-primary">MODULE 04: VIBRATO MASTERCLASS</span>
+<span class="text-[10px] mono text-primary">2/5 COMPLETE</span>
+</div>
+<div class="space-y-2">
+<div class="p-4 bg-surface-container rounded-2xl flex items-center gap-4 group cursor-pointer hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex-grow">
+<p class="text-sm font-medium">History of Vibrato</p>
+<p class="text-[10px] mono text-on-surface-variant">08:24</p>
+</div>
+</div>
+<div class="p-4 bg-primary text-white rounded-2xl flex items-center gap-4 glow-primary shadow-xl shadow-primary/10 cursor-default">
+<span class="material-symbols-outlined text-lg">play_circle</span>
+<div class="flex-grow">
+<p class="text-sm font-bold">Advanced Techniques</p>
+<p class="text-[10px] mono text-white/80">18:32</p>
+</div>
+<span class="material-symbols-outlined text-sm">equalizer</span>
+</div>
+<div class="p-4 bg-surface-container rounded-2xl flex items-center gap-4 group cursor-pointer hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">lock</span>
+<div class="flex-grow">
+<p class="text-sm font-medium text-on-surface-variant">The Slow Hand Method</p>
+<p class="text-[10px] mono text-on-surface-variant">12:10</p>
+</div>
+</div>
+<div class="p-4 bg-surface-container rounded-2xl flex items-center gap-4 group cursor-pointer hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">lock</span>
+<div class="flex-grow">
+<p class="text-sm font-medium text-on-surface-variant">Fast Oscillation Drill</p>
+<p class="text-[10px] mono text-on-surface-variant">15:45</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Module 3 -->
+<div class="p-4">
+<div class="flex items-center justify-between mb-4 px-2">
+<span class="mono text-[10px] tracking-tighter text-on-surface-variant">MODULE 05: PERFORMANCE</span>
+</div>
+<div class="space-y-2 opacity-50">
+<div class="p-4 bg-surface-container rounded-2xl flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">lock</span>
+<span class="text-sm font-medium">The Soloist's Mindset</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Footer Progress -->
+<div class="p-6 border-t border-outline-variant bg-surface-container-lowest">
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-bold text-on-surface uppercase tracking-widest">Total Progress</span>
+<span class="mono text-xs text-secondary">64%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="w-[64%] h-full bg-secondary"></div>
+</div>
+</div>
+</aside>
+</main>
+<!-- Footer (Shared Component Execution) -->
+<footer class="w-full py-16 px-8 grid grid-cols-1 md:grid-cols-4 gap-12 bg-stone-950 text-on-background border-t-0">
+<div class="md:col-span-1">
+<div class="text-3xl font-bold text-[#e63946] mb-4 font-serif">Harmony</div>
+<p class="text-stone-500 font-medium leading-relaxed">The Analog Master Experience. Elevating digital learning to editorial artistry.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-lg mb-6">Learn</h4>
+<nav class="flex flex-col gap-3">
+<a class="text-stone-500 hover:text-[#2a9d8f] transition-colors" href="#">Lessons</a>
+<a class="text-stone-500 hover:text-[#2a9d8f] transition-colors" href="#">Masterclasses</a>
+<a class="text-stone-500 hover:text-[#2a9d8f] transition-colors" href="#">Sheet Music</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-lg mb-6">Support</h4>
+<nav class="flex flex-col gap-3">
+<a class="text-stone-500 hover:text-[#2a9d8f] transition-colors" href="#">Pricing</a>
+<a class="text-stone-500 hover:text-[#2a9d8f] transition-colors" href="#">FAQ</a>
+<a class="text-stone-500 hover:text-[#2a9d8f] transition-colors" href="#">Contact</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-lg mb-6">Legal</h4>
+<nav class="flex flex-col gap-3">
+<a class="text-stone-500 hover:text-[#2a9d8f] transition-colors" href="#">Privacy</a>
+<a class="text-stone-500 hover:text-[#2a9d8f] transition-colors" href="#">Terms</a>
+<div class="pt-4">
+<p class="text-xs text-stone-600 mono">© 2024 Harmony LMS. The Analog Master Experience.</p>
+</div>
+</nav>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Subscription Plans | Harmony LMS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Work+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#006a60",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffdcc4",
+                        "error": "#ba1a1a",
+                        "tertiary": "#8b4c11",
+                        "on-surface": "#1e1c12",
+                        "inverse-primary": "#ffb3b1",
+                        "surface-variant": "#e9e2d2",
+                        "primary-fixed-dim": "#ffb3b1",
+                        "on-background": "#1e1c12",
+                        "surface-container-low": "#faf3e2",
+                        "primary-container": "#db313f",
+                        "on-tertiary-container": "#fffbff",
+                        "secondary-fixed-dim": "#6fd8c8",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#5b403f",
+                        "on-secondary-fixed": "#00201c",
+                        "surface-bright": "#fff9ec",
+                        "secondary-fixed": "#8cf5e4",
+                        "on-tertiary-fixed": "#2f1400",
+                        "surface-container-high": "#eee8d7",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#bb152c",
+                        "surface-container": "#f4eddd",
+                        "surface-container-highest": "#e9e2d2",
+                        "surface": "#fff9ec",
+                        "on-primary-container": "#fffbff",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#6f3800",
+                        "inverse-on-surface": "#f7f0df",
+                        "on-secondary-fixed-variant": "#005048",
+                        "primary-fixed": "#ffdad8",
+                        "outline": "#8f6f6e",
+                        "on-secondary-container": "#007166",
+                        "on-primary-fixed": "#410007",
+                        "secondary-container": "#8cf5e4",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#e4bebc",
+                        "on-primary-fixed-variant": "#92001c",
+                        "surface-dim": "#e0dac9",
+                        "primary": "#b7102a",
+                        "inverse-surface": "#333025",
+                        "background": "#fff9ec",
+                        "tertiary-fixed-dim": "#ffb780",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#a96428"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Work Sans", "sans-serif"],
+                        "label": ["JetBrains Mono", "monospace"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Work Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Newsreader', serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .glass { background: rgba(255, 249, 236, 0.9); backdrop-filter: blur(12px); }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<nav class="sticky top-0 w-full z-50 bg-[#fff9ec]/90 dark:bg-stone-950/90 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-8">
+<a class="text-2xl font-black font-serif text-[#E63946] dark:text-[#E63946]" href="#">Harmony LMS</a>
+<div class="hidden md:flex gap-6">
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#8338EC] transition-all duration-300" href="#">Courses</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#8338EC] transition-all duration-300" href="#">Masterclasses</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#8338EC] transition-all duration-300" href="#">Community</a>
+<a class="text-[#E63946] dark:text-[#E63946] font-bold border-b-2 border-[#E63946] transition-all duration-300" href="#">Pricing</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">account_circle</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-xl font-semibold active:scale-95 transition-transform">Get Started</button>
+</div>
+</div>
+</nav>
+<main class="max-w-[1120px] mx-auto px-6 py-20">
+<!-- SECTION 1: HEADER -->
+<header class="text-center mb-16 space-y-6">
+<h1 class="text-5xl md:text-6xl font-semibold tracking-tight text-on-surface">Unlock the full library.</h1>
+<p class="text-xl text-[#2E2E42] max-w-xl mx-auto">One subscription. 500+ courses. Zero lock-in.</p>
+<div class="inline-flex items-center p-1 bg-surface-container rounded-2xl">
+<button class="px-6 py-2.5 rounded-xl text-sm font-semibold transition-all">Monthly</button>
+<button class="px-6 py-2.5 rounded-xl text-sm font-semibold bg-surface-container-lowest shadow-sm flex items-center gap-2">
+                    Yearly (save 30%)
+                    <span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] uppercase tracking-widest px-2 py-0.5 rounded-full font-bold">Best value</span>
+</button>
+</div>
+</header>
+<!-- SECTION 2: PRICING CARDS -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center mb-32">
+<!-- CARD 1: STARTER -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl border border-outline-variant flex flex-col h-full">
+<div class="mb-8">
+<h3 class="text-2xl font-bold mb-2">Starter</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-bold">₹0</span>
+<span class="text-on-surface-variant">/ 7 days trial</span>
+</div>
+<p class="mt-4 text-on-surface-variant text-sm">Perfect for beginners exploring the foundations.</p>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#2A9D8F]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">Access to Starter courses</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#2A9D8F]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">Community forum read-only</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#2A9D8F]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm">HD video quality</span>
+</li>
+</ul>
+<button class="w-full py-4 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary/5 transition-colors">Start free trial</button>
+</div>
+<!-- CARD 2: PRO -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl border-2 border-[#E63946] scale-105 shadow-2xl relative flex flex-col h-full z-10">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#E63946] text-surface px-4 py-1 rounded-full text-[10px] font-black tracking-widest uppercase">Most Popular</div>
+<div class="mb-8">
+<h3 class="text-2xl font-bold mb-2 text-[#E63946]">Pro</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-bold">₹4,199</span>
+<span class="text-on-surface-variant">/ year</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-on-surface-variant/60 line-through text-sm font-mono">₹5,988</span>
+<span class="text-primary text-xs font-bold">Save ₹1,789</span>
+</div>
+<p class="mt-4 text-on-surface-variant text-sm">The complete studio experience for serious learners.</p>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#2A9D8F]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-medium">All 500+ courses</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#2A9D8F]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-medium">Live masterclasses</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#2A9D8F]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-medium">Downloadable lesson sheets</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#2A9D8F]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-medium">Progress certificates</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#2A9D8F]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-medium">Community full access</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#2A9D8F]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-medium">Priority support</span>
+</li>
+</ul>
+<button class="w-full py-4 bg-[#E63946] text-surface font-bold rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2">Start Pro trial <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+</div>
+<!-- CARD 3: MASTER -->
+<div class="bg-[#1A1A2E] p-8 rounded-3xl text-surface-container-lowest flex flex-col h-full">
+<div class="mb-8">
+<h3 class="text-2xl font-bold mb-2 text-[#F4A261]">Master</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-bold">₹9,990</span>
+<span class="text-surface-container-highest/60 text-sm">/ year</span>
+</div>
+<p class="mt-4 text-surface-container-highest/70 text-sm">Elite mentorship and direct feedback from the pros.</p>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#F4A261]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-medium text-surface-container-lowest">Everything in Pro</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#F4A261]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm text-surface-container-lowest">1-on-1 feedback (2/mo)</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#F4A261]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm text-surface-container-lowest">Grammy-artist workshops</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#F4A261]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm text-surface-container-lowest">Early access to releases</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#F4A261]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm text-surface-container-lowest">Dedicated mentor</span>
+</li>
+</ul>
+<button class="w-full py-4 bg-gradient-to-r from-[#F4A261] to-[#E76F51] text-[#1A1A2E] font-black rounded-xl hover:brightness-110 transition-all">Go Master</button>
+</div>
+</section>
+<!-- SECTION 3: COMPARISON TABLE -->
+<section class="mb-32 overflow-hidden rounded-3xl bg-surface-container-low p-12">
+<h2 class="text-4xl font-semibold text-center mb-16">Compare features</h2>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-separate border-spacing-y-4">
+<thead>
+<tr class="text-sm font-label uppercase tracking-widest text-on-surface-variant">
+<th class="py-4 font-normal sticky left-0 bg-surface-container-low">Feature</th>
+<th class="py-4 px-6 text-center">Starter</th>
+<th class="py-4 px-6 text-center">Pro</th>
+<th class="py-4 px-6 text-center">Master</th>
+</tr>
+</thead>
+<tbody class="text-sm">
+<tr>
+<td class="py-6 font-medium sticky left-0 bg-surface-container-low">Access to core catalog</td>
+<td class="py-6 px-6 text-center"><span class="material-symbols-outlined text-[#2A9D8F]">check</span></td>
+<td class="py-6 px-6 text-center"><span class="material-symbols-outlined text-[#2A9D8F]">check</span></td>
+<td class="py-6 px-6 text-center"><span class="material-symbols-outlined text-[#2A9D8F]">check</span></td>
+</tr>
+<tr>
+<td class="py-6 font-medium sticky left-0 bg-surface-container-low">Premium Masterclasses</td>
+<td class="py-6 px-6 text-center"><span class="material-symbols-outlined text-outline-variant">close</span></td>
+<td class="py-6 px-6 text-center"><span class="material-symbols-outlined text-[#2A9D8F]">check</span></td>
+<td class="py-6 px-6 text-center"><span class="material-symbols-outlined text-[#2A9D8F]">check</span></td>
+</tr>
+<tr>
+<td class="py-6 font-medium sticky left-0 bg-surface-container-low">Artist Mentorship</td>
+<td class="py-6 px-6 text-center"><span class="material-symbols-outlined text-outline-variant">close</span></td>
+<td class="py-6 px-6 text-center"><span class="material-symbols-outlined text-outline-variant">close</span></td>
+<td class="py-6 px-6 text-center"><span class="material-symbols-outlined text-[#2A9D8F]">check</span></td>
+</tr>
+<tr>
+<td class="py-6 font-medium sticky left-0 bg-surface-container-low">Studio Gear Discounts</td>
+<td class="py-6 px-6 text-center"><span class="material-symbols-outlined text-outline-variant">close</span></td>
+<td class="py-6 px-6 text-center">10% Off</td>
+<td class="py-6 px-6 text-center">25% Off</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- SECTION 4: TRUST ROW -->
+<section class="flex flex-wrap justify-center items-center gap-12 mb-32 opacity-70">
+<div class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all cursor-default">
+<span class="material-symbols-outlined text-2xl">payments</span>
+<span class="font-label text-xs uppercase font-bold tracking-tighter">Razorpay Secure</span>
+</div>
+<div class="flex items-center gap-2 cursor-default">
+<span class="material-symbols-outlined text-2xl text-secondary">verified_user</span>
+<span class="font-label text-xs uppercase font-bold tracking-tighter">SSL Encrypted</span>
+</div>
+<div class="flex items-center gap-2 cursor-default">
+<span class="material-symbols-outlined text-2xl text-primary">cancel</span>
+<span class="font-label text-xs uppercase font-bold tracking-tighter">Cancel anytime</span>
+</div>
+<div class="flex items-center gap-2 cursor-default">
+<span class="material-symbols-outlined text-2xl text-tertiary">shield</span>
+<span class="font-label text-xs uppercase font-bold tracking-tighter">7-day refund policy</span>
+</div>
+</section>
+<!-- SECTION 5: TESTIMONIAL STRIP -->
+<section class="max-w-3xl mx-auto text-center mb-32">
+<span class="text-7xl font-serif text-[#E63946] leading-none select-none">“</span>
+<blockquote class="text-2xl md:text-3xl font-headline italic leading-relaxed text-on-surface -mt-8 mb-10">
+                The Pro plan changed how I approach sound design. Having access to the raw project files of Grammy winners is an education you can't get anywhere else.
+            </blockquote>
+<div class="flex items-center justify-center gap-4">
+<img alt="Student profile" class="w-14 h-14 rounded-full object-cover shadow-lg border-2 border-surface-container-highest" data-alt="close-up portrait of a young male musician with soulful eyes in a moody dimly lit studio environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnyzjfQo19dXMMoMQhirZcS32ry_f2-VTwvgXJws1kHRY_UFThONLvepUVk2rTvRIeSbbGntR96leiDlz_pLwAXBNj2U6vwyug8gxZ5b2L6Bu0cQD_hrErHQ-bycIh-jWrzAiqz0KUcE8DjsMQH4jMshWXL75Ah2nyEyOf0d6cAGmVDrtHmxKLfH7NweVyzezdHFEZ7O3Kc8p7x_T6Iz6THzkwPH1s3Dr0k9wjz8Z7ml3k69eavVnIyy7l-084JJu6c22lx5aJut15"/>
+<div class="text-left">
+<p class="font-bold text-on-surface">Arjun Mehta</p>
+<p class="text-sm text-on-surface-variant font-label uppercase tracking-widest">Electronic Music Producer</p>
+</div>
+</div>
+</section>
+<!-- SECTION 6: FAQ ACCORDION -->
+<section class="max-w-2xl mx-auto space-y-4">
+<h2 class="text-4xl font-semibold text-center mb-12">Frequently Asked Questions</h2>
+<details class="group bg-surface-container p-6 rounded-2xl transition-all duration-300 open:bg-surface-container-high cursor-pointer" open="">
+<summary class="flex justify-between items-center font-bold text-lg list-none">
+                    Can I switch plans later?
+                    <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant leading-relaxed">Absolutely. You can upgrade or downgrade your subscription at any time from your account settings. If you upgrade, the change happens immediately with a prorated charge.</p>
+</details>
+<details class="group bg-surface-container p-6 rounded-2xl transition-all duration-300 open:bg-surface-container-high cursor-pointer">
+<summary class="flex justify-between items-center font-bold text-lg list-none">
+                    What does '7-day trial' mean for the Starter plan?
+                    <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant leading-relaxed">It's 100% free for 7 days. You'll get access to core beginner modules. If you don't cancel before the 7th day, you won't be charged anything, but your access will simply expire.</p>
+</details>
+<details class="group bg-surface-container p-6 rounded-2xl transition-all duration-300 open:bg-surface-container-high cursor-pointer">
+<summary class="flex justify-between items-center font-bold text-lg list-none">
+                    Do the certificates carry weight in the industry?
+                    <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant leading-relaxed">Our certificates are co-signed by the Analog Master faculty. While they aren't university degrees, they are highly respected by production houses and labels as a sign of verified technical skill.</p>
+</details>
+<details class="group bg-surface-container p-6 rounded-2xl transition-all duration-300 open:bg-surface-container-high cursor-pointer">
+<summary class="flex justify-between items-center font-bold text-lg list-none">
+                    How do 1-on-1 sessions work?
+                    <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant leading-relaxed">In the Master plan, you get two credits per month to book a 30-minute private video call with a senior mentor for track review or technical troubleshooting.</p>
+</details>
+<details class="group bg-surface-container p-6 rounded-2xl transition-all duration-300 open:bg-surface-container-high cursor-pointer">
+<summary class="flex justify-between items-center font-bold text-lg list-none">
+                    Is there a student discount available?
+                    <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant leading-relaxed">Yes! If you are a student at a recognized institution, contact our support team with your ID to receive a 25% discount code for the Pro annual plan.</p>
+</details>
+<details class="group bg-surface-container p-6 rounded-2xl transition-all duration-300 open:bg-surface-container-high cursor-pointer">
+<summary class="flex justify-between items-center font-bold text-lg list-none">
+                    Can I download videos for offline viewing?
+                    <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant leading-relaxed">Offline viewing is currently available through our mobile app for Pro and Master subscribers. Desktop downloads are restricted for copyright protection.</p>
+</details>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#fff9ec] dark:bg-stone-950 mt-20">
+<div class="w-full py-12 px-8 max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-left">
+<span class="font-serif text-xl font-bold text-stone-900 dark:text-stone-100 block mb-2">Harmony LMS</span>
+<p class="font-mono uppercase text-[10px] tracking-widest text-stone-500">© 2024 Harmony LMS. The Analog Master Series.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-mono uppercase text-xs tracking-widest text-stone-500 hover:text-[#2A9D8F] transition-colors" href="#">Privacy</a>
+<a class="font-mono uppercase text-xs tracking-widest text-stone-500 hover:text-[#2A9D8F] transition-colors" href="#">Terms</a>
+<a class="font-mono uppercase text-xs tracking-widest text-stone-500 hover:text-[#2A9D8F] transition-colors" href="#">Studio Guide</a>
+<a class="font-mono uppercase text-xs tracking-widest text-stone-500 hover:text-[#2A9D8F] transition-colors" href="#">Support</a>
+</div>
+</div>
+</footer>
+</body></html>
