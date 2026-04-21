@@ -1,6 +1,7 @@
 .browse-courses {
   min-height: 100vh;
-  background-color: var(--canvas-cream);
+  background-color: #FAFAFA;
+  padding-top: 72px;
 }
 
 /* Catalog Header */
@@ -21,14 +22,30 @@
   color: var(--ink-body);
 }
 
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #E0E0E0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
 /* Filter Bar */
 .filter-bar {
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
-  padding: 24px 0;
   position: sticky;
   top: 72px;
-  z-index: 50;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 24px 0;
+  border-bottom: 1px solid #E0E0E0;
+  z-index: 90;
+  box-shadow: var(--shadow-sm);
 }
 
 .filter-bar .section-container {
@@ -78,17 +95,19 @@
 }
 
 .course-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background-color: #FFFFFF;
   border-radius: 20px;
   overflow: hidden;
-  transition: all 0.2s;
+  box-shadow: var(--shadow-md);
+  border: 1px solid #E0E0E0;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .course-card:hover {
-  box-shadow: 0 12px 28px rgba(26, 26, 46, 0.1);
-  transform: translateY(-3px);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: #C41E3A;
 }
 
 .card-image {
@@ -152,6 +171,14 @@
   font-weight: 600;
   margin-bottom: 12px;
   line-height: 1.4;
+}
+
+.card-content h3.logo {
+  font-family: 'Newsreader', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #C41E3A;
+  text-decoration: none;
 }
 
 .instructor {

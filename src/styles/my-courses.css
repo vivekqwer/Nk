@@ -1,6 +1,7 @@
 .my-courses {
   min-height: 100vh;
-  background: var(--canvas-cream);
+  background-color: #FAFAFA;
+  padding-top: 72px;
 }
 
 /* Navigation */
@@ -139,19 +140,21 @@
 }
 
 .course-card {
-  background: var(--surface);
+  background-color: #FFFFFF;
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid var(--border);
-  text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow-md);
+  border: 1px solid #E0E0E0;
+  transition: all 0.3s ease;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
 }
 
 .course-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: #C41E3A;
 }
 
 .card-image {

@@ -49,6 +49,7 @@ function Dashboard() {
               <Link to="/dashboard" className="active">Dashboard</Link>
               <Link to="/courses">Courses</Link>
               <Link to="/my-courses">My Courses</Link>
+              <Link to="/wishlist">Wishlist</Link>
               <a href="#live">Live</a>
               <Link to="/community">Community</Link>
             </div>

@@ -1,0 +1,380 @@
+.admin-login {
+  min-height: 100vh;
+  background-color: #121212;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, #2a2a2a 1px, transparent 0);
+  background-size: 40px 40px;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.glow-primary {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: rgba(230, 57, 70, 0.1);
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 0;
+}
+
+.glow-secondary {
+  position: absolute;
+  bottom: -10%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: rgba(0, 106, 96, 0.1);
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.login-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 480px;
+}
+
+.login-card {
+  background: rgba(30, 28, 18, 0.85);
+  backdrop-filter: blur(24px);
+  border-radius: 24px;
+  padding: 40px 48px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-top-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #E63946, #8338EC, #2A9D8F);
+  opacity: 0.5;
+}
+
+.login-header {
+  margin-bottom: 48px;
+}
+
+.security-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.badge-icon {
+  width: 40px;
+  height: 40px;
+  background: #E63946;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 20px;
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.2);
+}
+
+.badge-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #FFB3B1;
+}
+
+.logo {
+  font-family: 'Newsreader', serif;
+  font-size: 48px;
+  font-weight: 800;
+  font-style: italic;
+  color: white;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #5b403f;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #94a3b8;
+  margin-left: 4px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  border-radius: 12px;
+  padding: 16px 48px;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.input-wrapper input::placeholder {
+  color: #475569;
+}
+
+.input-wrapper input:focus {
+  outline: none;
+  ring: 2px solid rgba(230, 57, 70, 0.4);
+  box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.4);
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  font-size: 20px;
+  transition: color 0.2s;
+}
+
+.input-wrapper:focus-within .input-icon {
+  color: #E63946;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 0.2s;
+}
+
+.toggle-password:hover {
+  color: white;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.remember-me input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.remember-me input[type="checkbox"]:checked {
+  background: #E63946;
+  border-color: #E63946;
+}
+
+.remember-me span {
+  font-size: 14px;
+  color: #94a3b8;
+  transition: color 0.2s;
+}
+
+.remember-me:hover span {
+  color: #e2e8f0;
+}
+
+.reset-link {
+  font-size: 14px;
+  color: #E63946;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.reset-link:hover {
+  color: #FFB3B1;
+}
+
+.submit-btn {
+  width: 100%;
+  background: #E63946;
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.2);
+  transition: all 0.3s;
+}
+
+.submit-btn:hover {
+  background: #db313f;
+  transform: scale(0.98);
+}
+
+.submit-btn .arrow {
+  font-size: 20px;
+}
+
+.login-footer {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.status-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #8cf5e4;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.status-item span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.lock-icon {
+  font-size: 14px;
+}
+
+.bottom-decoration {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  opacity: 0.2;
+  transition: opacity 0.5s;
+}
+
+.bottom-decoration:hover {
+  opacity: 1;
+}
+
+.decoration-line {
+  height: 48px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.decoration-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: white;
+  transform: rotate(90deg);
+  transform-origin: bottom right;
+  translate: -10px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+}
+
+.warning-text {
+  text-align: center;
+  color: #475569;
+  font-size: 14px;
+  font-style: italic;
+  font-family: 'Newsreader', serif;
+  opacity: 0.6;
+  margin-top: 40px;
+}
+
+@media (max-width: 640px) {
+  .login-card {
+    padding: 32px 24px;
+  }
+
+  .logo {
+    font-size: 36px;
+  }
+
+  .bottom-decoration {
+    bottom: 20px;
+    right: 20px;
+  }
+}

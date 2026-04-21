@@ -1,6 +1,434 @@
 .subscription-page {
   min-height: 100vh;
-  background-color: var(--canvas-cream);
+  background-color: #FAFAFA;
+  color: #212121;
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* Top Bar */
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.brand {
+  font-family: 'Newsreader', serif;
+  font-size: 24px;
+  font-weight: 900;
+  color: #C41E3A;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: none;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+  }
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #757575;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #C41E3A;
+}
+
+.nav-links a.active {
+  color: #C41E3A;
+  font-weight: 700;
+  border-bottom: 2px solid #C41E3A;
+}
+
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.icon-btn:hover {
+  background-color: #F5F5F5;
+}
+
+.icon-btn .material-symbols-outlined {
+  color: #757575;
+}
+
+.get-started-btn {
+  background-color: #C41E3A;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.get-started-btn:active {
+  transform: scale(0.95);
+}
+
+/* Main Content */
+.main-content {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+/* Page Header */
+.page-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.page-header h1 {
+  font-family: 'Newsreader', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #212121;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .page-header h1 {
+    font-size: 64px;
+  }
+}
+
+.page-header p {
+  font-size: 20px;
+  color: #757575;
+  max-width: 480px;
+  margin: 0 auto 32px;
+}
+
+.billing-toggle {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
+  background-color: #F5F5F5;
+  border-radius: 16px;
+}
+
+.toggle-btn {
+  padding: 10px 24px;
+  border-radius: 12px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggle-btn.active {
+  background-color: white;
+  color: #C41E3A;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.best-value {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 4px 8px;
+  background-color: #FFDCC4;
+  color: #2F1400;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+/* Pricing Section */
+.pricing-section {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+  margin-bottom: 96px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .pricing-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pricing-card {
+  background-color: white;
+  padding: 32px;
+  border-radius: 24px;
+  border: 2px solid #E0E0E0;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.pricing-card.featured {
+  border-color: #C41E3A;
+  transform: scale(1.05);
+  box-shadow: 0 16px 32px rgba(196, 30, 58, 0.2);
+  position: relative;
+  z-index: 10;
+}
+
+.pricing-card.master {
+  background-color: #1A1A2E;
+  color: white;
+  border-color: #1A1A2E;
+}
+
+.popular-badge {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #C41E3A;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.card-header {
+  margin-bottom: 40px;
+}
+
+.card-header h3 {
+  font-family: 'Newsreader', serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #212121;
+}
+
+.pricing-card.master .card-header h3 {
+  color: #F4A261;
+}
+
+.price-display {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 36px;
+  font-weight: 700;
+  color: #212121;
+}
+
+.pricing-card.master .price {
+  color: white;
+}
+
+.period {
+  color: #757575;
+  font-size: 16px;
+}
+
+.pricing-card.master .period {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.savings {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.savings .mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  color: #757575;
+  text-decoration: line-through;
+}
+
+.savings .save {
+  color: #C41E3A;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.card-header p {
+  font-size: 14px;
+  color: #757575;
+  margin-top: 16px;
+}
+
+.pricing-card.master .card-header p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.features {
+  list-style: none;
+  margin-bottom: 40px;
+  flex: 1;
+}
+
+.features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #212121;
+}
+
+.pricing-card.master .features li {
+  color: white;
+}
+
+.features .material-symbols-outlined {
+  color: #2A9D8F;
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.features .material-symbols-outlined.filled {
+  font-variation-settings: 'FILL' 1;
+}
+
+.feature-bold {
+  font-weight: 600;
+}
+
+.btn-secondary,
+.btn-primary,
+.btn-gold {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #C41E3A;
+  border: 2px solid #C41E3A;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(196, 30, 58, 0.05);
+}
+
+.btn-primary {
+  background-color: #C41E3A;
+  color: white;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, #F4A261, #E76F51);
+  color: white;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(244, 162, 97, 0.3);
+}
+
+/* FAQ Section */
+.faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-section h2 {
+  font-family: 'Newsreader', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #212121;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background-color: white;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #E0E0E0;
+}
+
+.faq-item h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #212121;
+  margin-bottom: 8px;
+}
+
+.faq-item p {
+  font-size: 14px;
+  color: #757575;
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
 .pricing-header {
@@ -14,9 +442,9 @@
   margin-bottom: 16px;
 }
 
-.pricing-header > .section-container > p {
+.pricing-header>.section-container>p {
   font-size: 18px;
-  color: var(--ink-body);
+  color: #757575;
   margin-bottom: 32px;
 }
 
@@ -30,7 +458,7 @@
 .toggle-btn {
   padding: 12px 24px;
   border-radius: 12px;
-  border: 1px solid var(--border);
+  border: 1px solid #E0E0E0;
   background: transparent;
   font-weight: 600;
   cursor: pointer;
@@ -38,13 +466,13 @@
 }
 
 .toggle-btn.active {
-  background: var(--ink-primary);
-  color: var(--canvas-cream);
+  background: #C41E3A;
+  color: white;
 }
 
 .best-value {
-  background: var(--tertiary-gold);
-  color: var(--ink-primary);
+  background: #FFDCC4;
+  color: #2F1400;
   padding: 4px 12px;
   border-radius: 999px;
   font-size: 12px;
@@ -73,14 +501,14 @@
 
 .trust-item p {
   font-weight: 600;
-  color: var(--ink-body);
+  color: #757575;
 }
 
 @media (max-width: 768px) {
   .pricing-header h1 {
     font-size: 40px;
   }
-  
+
   .trust-items {
     flex-direction: column;
     gap: 24px;

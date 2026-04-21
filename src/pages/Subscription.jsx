@@ -1,130 +1,188 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import MobileNav from '../components/MobileNav';
-import '../styles/landing.css';
 import '../styles/subscription.css';
 
 function Subscription() {
-  const [billingCycle, setBillingCycle] = useState('monthly');
+  const [billingCycle, setBillingCycle] = useState('yearly');
 
   return (
     <div className="subscription-page">
-      {/* Navigation */}
-      <nav className="navbar">
-        <div className="nav-container">
-          <div className="nav-left">
-            <Link to="/" className="logo">Harmony</Link>
+      {/* TopAppBar */}
+      <nav className="top-bar">
+        <div className="top-bar-content">
+          <div className="top-bar-left">
+            <Link to="/" className="brand">Harmony LMS</Link>
             <div className="nav-links">
-              <Link to="/dashboard">Dashboard</Link>
-              <Link to="/courses" className="active">Courses</Link>
-              <a href="#live">Live Sessions</a>
+              <Link to="/courses">Courses</Link>
+              <Link to="#">Masterclasses</Link>
               <Link to="/community">Community</Link>
+              <Link to="/subscription" className="active">Pricing</Link>
             </div>
           </div>
-          <div className="nav-right">
-            <MobileNav />
-            <div className="search-icon">🔍</div>
-            <div className="notifications">🔔</div>
-            <div className="avatar">A</div>
+          <div className="top-bar-right">
+            <button className="icon-btn">
+              <span className="material-symbols-outlined">account_circle</span>
+            </button>
+            <button className="get-started-btn">Get Started</button>
           </div>
         </div>
       </nav>
 
-      {/* Header */}
-      <section className="pricing-header">
-        <div className="section-container" style={{ textAlign: 'center' }}>
+      <main className="main-content">
+        {/* Header */}
+        <header className="page-header">
           <h1>Unlock the full library.</h1>
           <p>One subscription. 500+ courses. Zero lock-in.</p>
-
-          <div className="pricing-toggle">
+          <div className="billing-toggle">
+            <button
+              className={`toggle-btn ${billingCycle === 'monthly' ? '' : 'active'}`}
+              onClick={() => setBillingCycle('yearly')}
+            >
+              Yearly (save 30%)
+              <span className="best-value">Best value</span>
+            </button>
             <button
               className={`toggle-btn ${billingCycle === 'monthly' ? 'active' : ''}`}
               onClick={() => setBillingCycle('monthly')}
             >
               Monthly
             </button>
-            <button
-              className={`toggle-btn ${billingCycle === 'yearly' ? 'active' : ''}`}
-              onClick={() => setBillingCycle('yearly')}
-            >
-              Yearly <span className="best-value">Best value</span>
+          </div>
+        </header>
+
+        {/* Pricing Cards */}
+        <section className="pricing-section">
+          {/* Starter */}
+          <div className="pricing-card starter">
+            <div className="card-header">
+              <h3>Starter</h3>
+              <div className="price-display">
+                <span className="price">₹0</span>
+                <span className="period">/ 7 days trial</span>
+              </div>
+              <p>Perfect for beginners exploring the foundations.</p>
+            </div>
+            <ul className="features">
+              <li>
+                <span className="material-symbols-outlined filled">check_circle</span>
+                <span>Access to Starter courses</span>
+              </li>
+              <li>
+                <span className="material-symbols-outlined filled">check_circle</span>
+                <span>Community forum read-only</span>
+              </li>
+              <li>
+                <span className="material-symbols-outlined filled">check_circle</span>
+                <span>HD video quality</span>
+              </li>
+            </ul>
+            <button className="btn-secondary">Start free trial</button>
+          </div>
+
+          {/* Pro */}
+          <div className="pricing-card pro featured">
+            <div className="popular-badge">Most Popular</div>
+            <div className="card-header">
+              <h3>Pro</h3>
+              <div className="price-display">
+                <span className="price">{billingCycle === 'monthly' ? '₹499' : '₹4,199'}</span>
+                <span className="period">/ {billingCycle === 'monthly' ? 'month' : 'year'}</span>
+              </div>
+              {billingCycle === 'yearly' && (
+                <div className="savings">
+                  <span className="mono strike">₹5,988</span>
+                  <span className="save">Save ₹1,789</span>
+                </div>
+              )}
+              <p>The complete studio experience for serious learners.</p>
+            </div>
+            <ul className="features">
+              <li>
+                <span className="material-symbols-outlined filled">check_circle</span>
+                <span className="feature-bold">All 500+ courses</span>
+              </li>
+              <li>
+                <span className="material-symbols-outlined filled">check_circle</span>
+                <span className="feature-bold">Live masterclasses</span>
+              </li>
+              <li>
+                <span className="material-symbols-outlined filled">check_circle</span>
+                <span className="feature-bold">Downloadable lesson sheets</span>
+              </li>
+              <li>
+                <span className="material-symbols-outlined filled">check_circle</span>
+                <span className="feature-bold">Progress certificates</span>
+              </li>
+              <li>
+                <span className="material-symbols-outlined filled">check_circle</span>
+                <span className="feature-bold">Community full access</span>
+              </li>
+              <li>
+                <span className="material-symbols-outlined filled">check_circle</span>
+                <span className="feature-bold">Priority support</span>
+              </li>
+            </ul>
+            <button className="btn-primary">
+              Start Pro trial
+              <span className="material-symbols-outlined">arrow_forward</span>
             </button>
           </div>
-        </div>
-      </section>
 
-      {/* Pricing Cards */}
-      <section className="pricing">
-        <div className="pricing-cards">
-          <div className="pricing-card">
-            <h3>Starter</h3>
-            <div className="price">₹0</div>
-            <p>7 days trial</p>
-            <ul>
-              <li>✓ Access to Starter courses</li>
-              <li>✓ Community forum read-only</li>
-              <li>✓ HD video quality</li>
+          {/* Master */}
+          <div className="pricing-card master">
+            <div className="card-header">
+              <h3>Master</h3>
+              <div className="price-display">
+                <span className="price">{billingCycle === 'monthly' ? '₹999' : '₹9,990'}</span>
+                <span className="period">/ {billingCycle === 'monthly' ? 'month' : 'year'}</span>
+              </div>
+              <p>Billed annually</p>
+            </div>
+            <ul className="features">
+              <li>
+                <span className="material-symbols-outlined filled">check_circle</span>
+                <span className="feature-bold">Everything in Pro</span>
+              </li>
+              <li>
+                <span className="material-symbols-outlined filled">check_circle</span>
+                <span>1-on-1 feedback sessions (2/month)</span>
+              </li>
+              <li>
+                <span className="material-symbols-outlined filled">check_circle</span>
+                <span>Exclusive Grammy-artist workshops</span>
+              </li>
+              <li>
+                <span className="material-symbols-outlined filled">check_circle</span>
+                <span>Early access to new releases</span>
+              </li>
+              <li>
+                <span className="material-symbols-outlined filled">check_circle</span>
+                <span>Dedicated mentor</span>
+              </li>
             </ul>
-            <button className="secondary-button">Start free trial</button>
+            <Link to="/checkout" className="btn-gold">Go Master</Link>
           </div>
+        </section>
 
-          <div className="pricing-card featured">
-            <div className="ribbon">MOST POPULAR</div>
-            <h3>Pro</h3>
-            <div className="price">
-              {billingCycle === 'monthly' ? '₹499' : '₹4,199'}
-              <span>/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
+        {/* FAQ Section */}
+        <section className="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div className="faq-list">
+            <div className="faq-item">
+              <h3>Can I cancel anytime?</h3>
+              <p>Yes, you can cancel your subscription at any time with no questions asked.</p>
             </div>
-            {billingCycle === 'yearly' && <p><del>₹5,988</del> Save 30%</p>}
-            <ul>
-              <li>✓ All 500+ courses</li>
-              <li>✓ Live masterclasses</li>
-              <li>✓ Downloadable lesson sheets</li>
-              <li>✓ Progress certificates</li>
-              <li>✓ Community full access</li>
-              <li>✓ Priority support</li>
-            </ul>
-            <button className="primary-button">Start Pro trial →</button>
-          </div>
-
-          <div className="pricing-card premium">
-            <h3>Master</h3>
-            <div className="price">
-              {billingCycle === 'monthly' ? '₹999' : '₹9,990'}
-              <span>/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
+            <div className="faq-item">
+              <h3>Is there a money-back guarantee?</h3>
+              <p>We offer a 7-day money-back guarantee for all paid plans.</p>
             </div>
-            <p>Billed annually</p>
-            <ul>
-              <li>✓ Everything in Pro</li>
-              <li>✓ 1-on-1 feedback sessions (2/month)</li>
-              <li>✓ Exclusive Grammy-artist workshops</li>
-              <li>✓ Early access to new releases</li>
-              <li>✓ Dedicated mentor</li>
-            </ul>
-            <Link to="/checkout" className="gold-button">Go Master</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust Row */}
-      <section className="trust-row">
-        <div className="section-container">
-          <div className="trust-items">
-            <div className="trust-item">
-              <span>🔒</span>
-              <p>Secured by 256-bit encryption</p>
-            </div>
-            <div className="trust-item">
-              <span>💯</span>
-              <p>7-day money-back guarantee</p>
-            </div>
-            <div className="trust-item">
-              <span>🚫</span>
-              <p>Cancel anytime, no questions</p>
+            <div className="faq-item">
+              <h3>Can I switch plans?</h3>
+              <p>You can upgrade or downgrade your plan at any time from your account settings.</p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
     </div>
   );
 }

@@ -221,7 +221,7 @@ function LandingPage() {
             </div>
           </div>
           <div className="footer-bottom">
-            <p>© 2026 Harmony LMS. All rights reserved.</p>
+            <p> 2026 Harmony LMS. All rights reserved.</p>
           </div>
         </div>
       </footer>

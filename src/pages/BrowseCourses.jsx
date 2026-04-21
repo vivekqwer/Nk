@@ -68,6 +68,7 @@ function BrowseCourses() {
               <a href="/dashboard">Dashboard</a>
               <a href="/courses" className="active">Courses</a>
               <Link to="/my-courses">My Courses</Link>
+              <Link to="/wishlist">Wishlist</Link>
               <a href="#live">Live</a>
               <Link to="/community">Community</Link>
             </div>

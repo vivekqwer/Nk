@@ -2,42 +2,49 @@
 @import './mobile-nav.css';
 
 :root {
-  /* Harmony LMS Color Palette */
-  --primary-crimson: #E63946;
-  --primary-deep: #B8202E;
-  --primary-soft: #FFE5E8;
+  /* Premium Harmony LMS Color Palette */
+  --primary-crimson: #C41E3A;
+  --primary-deep: #8B0000;
+  --primary-soft: #FFE4E6;
 
-  --secondary-green: #2A9D8F;
-  --secondary-deep: #1E7268;
-  --secondary-soft: #D9F2EE;
+  --secondary-green: #00695C;
+  --secondary-deep: #004D40;
+  --secondary-soft: #E0F2F1;
 
-  --tertiary-gold: #F4A261;
-  --tertiary-deep: #D97E3C;
-  --tertiary-soft: #FDEFD9;
+  --tertiary-gold: #D4AF37;
+  --tertiary-deep: #B8860B;
+  --tertiary-soft: #FFF8DC;
 
-  --accent-violet: #8338EC;
-  --accent-soft: #EADDFB;
+  --accent-violet: #6A1B9A;
+  --accent-soft: #F3E5F5;
 
-  --canvas-cream: #FFF8E7;
+  --canvas-cream: #FAFAFA;
   --surface: #FFFFFF;
-  --surface-muted: #FAF3DD;
-  --border: #E8DFC6;
-  --border-strong: #C9BFA2;
+  --surface-muted: #F5F5F5;
+  --surface-elevated: #FFFFFF;
+  --border: #E0E0E0;
+  --border-strong: #BDBDBD;
 
-  --ink-primary: #1A1A2E;
-  --ink-body: #2E2E42;
-  --ink-muted: #6B6B7E;
-  --ink-placeholder: #A8A8B5;
+  --ink-primary: #212121;
+  --ink-body: #424242;
+  --ink-muted: #757575;
+  --ink-placeholder: #9E9E9E;
 
-  --dark-canvas: #0F0E17;
-  --dark-surface: #1A1A2E;
-  --dark-border: #2E2E42;
-  --dark-ink: #FFF8E7;
+  --dark-canvas: #121212;
+  --dark-surface: #1E1E1E;
+  --dark-border: #333333;
+  --dark-ink: #FFFFFF;
 
-  --success: #06D6A0;
-  --warning: #FFB703;
-  --error: #EF476F;
-  --info: #4CC9F0;
+  --success: #2E7D32;
+  --warning: #F57C00;
+  --error: #C62828;
+  --info: #0277BD;
+
+  /* Premium shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 * {
@@ -48,9 +55,10 @@
 
 body {
   font-family: 'Work Sans', sans-serif;
-  background-color: var(--canvas-cream);
-  color: var(--ink-primary);
-  line-height: 1.5;
+  background-color: #FAFAFA;
+  color: #212121;
+  line-height: 1.6;
+  min-height: 100vh;
 }
 
 h1,
